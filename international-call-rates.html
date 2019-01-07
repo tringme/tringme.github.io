@@ -1,0 +1,858 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]>			<html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>			<html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8" />
+    <title>International Call Rates for VoIP Calls from App and Website | TringMe</title>
+    <meta name="keywords" content="cheap call rates, cheapest calling rates, cheap international call rates, cheap calling rate, international call rates,  voip call rates, cheap voip call rates, cheap international voip call rates, mobile voip international call rates" />
+    <meta name="description" content="Find international call rates for any country OR number you want to call. TringMe offers lowest VoIP calling rates for any mobiles and landlines. Start calling now!/>
+    <meta name="Author" content="https://tringme.com" />
+
+    <!-- mobile settings -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <!-- WEB FONTS : use %7C instead of | (pipe) -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+
+    <!-- CORE CSS -->
+    <link href="assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+
+    <!-- THEME CSS -->
+    <link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+    <!-- PAGE LEVEL SCRIPTS -->
+    <link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/color_scheme/red.css" rel="stylesheet" type="text/css" id="color_scheme" />
+
+    <!-- REVOLUTION SLIDER -->
+    <link href="assets/plugins/slider.revolution/css/extralayers.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/slider.revolution/css/settings.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="https://api.tringme.com/tringmewebapi.js"></script>
+    <link href="assets/css/angucomplete-alt.css" rel="stylesheet">
+	
+	<!-- FEVICON -->
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="TringMe"/>
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+	
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','analytics');
+
+		analytics('create', 'UA-74062941-1', 'auto');
+		analytics('send', 'pageview');
+	</script>
+	
+</head>
+
+<body ng-app="app" class="smoothscroll enable-animation">
+    <!-- wrapper -->
+    <div id="wrapper" ng-controller="MainController">
+	
+	
+        <div id="header" class="sticky clearfix">
+
+		
+            <!-- TOP NAV -->
+		<tringmesection cref="header.html">
+            <header id="topNav">
+                <div class="container">
+
+                    <!-- Mobile Menu Button -->
+                    <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Logo -->
+                    <a class="logo pull-left" href="index.html">
+                        <img src="assets/images/tringme-logo.png" alt="TringMe logo" /> <!-- light logo -->
+                        <!-- <img src="assets/images/logo_dark.png" alt="" /> --> <!-- dark logo -->
+                    </a>
+		    
+                    <div class="navbar-collapse pull-right nav-main-collapse collapse submenu-dark">
+                        <nav class="nav-main">
+                            <ul id="topMain" class="nav nav-pills nav-main">
+                                <li class="dropdown">
+                                    <a href="index.html">
+                                        Home
+                                    </a>
+
+                                </li>
+                               
+                                <li class="dropdown">
+                                    <a href="international-call-rates.html">
+                                        Rates
+                                    </a>
+                                   
+                                </li>
+                                <li class="dropdown">
+                                    <a href="developer/overview.html">
+                                        Developer
+                                    </a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="help.html">
+                                       
+                                        Help
+                                    </a>
+                                </li>
+
+                                <li class="dropdown ">
+                                    <a href="/login" class="hidden-lg hidden-md">
+                                        {{logintext}}
+                                    </a>
+                                    <a href="/login" class="hidden-xs hidden-sm">
+                                        <span class='btn login'>
+                                            {{logintext}}
+                                        </span>
+                                    </a>
+                                </li>
+                            
+
+                            </ul>
+
+                        </nav>
+                    </div>
+		    
+
+                </div>
+            </header>
+		</tringmesection>
+            <!-- /Top Nav -->
+
+        </div>
+        <section ng-class="isMobile()?'page-header page-header-xs':'page-header'">
+            <div class="container">
+
+                <h1>International Call Rates</h1>
+
+                <!-- breadcrumbs -->
+                <ol class="breadcrumb visible-lg visible-md">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">International Call Rates</a></li>
+
+                </ol><!-- /breadcrumbs -->
+
+            </div>
+        </section>
+        <!-- /PAGE HEADER -->
+        <!-- -->
+        <section class="padding-xs alternate">
+            <div class="container">
+
+                <!-- SEARCH -->
+                <h3 class='text-center col-sm-12 margin-bottom-0 visible-lg visible-md'>
+                    TringMe offers you high-quality international calls at the lowest rates.
+                </h3>
+                <h4 class='text-center col-sm-12 margin-bottom-40'>
+                    Check our rates for any country or destination below.
+                </h4>
+                <div class='col-sm-12 searchBar'>
+                    <div class="input-group">
+                        <div angucomplete-alt id="ex1" placeholder="Which country or number would you like to call?" maxlength="50" pause="100" selected-object="selectedCountry" local-data="countries" text-no-results=false
+                             search-fields="name" title-field="name" minlength="1" input-class="form-control form-control-small small-input" match-class="highlight" input-changed="findrate();">
+                        </div>
+                        <div class="input-group-btn">
+                            <button type="submit" class="btn btn-default input-lg margin-left-10 weight-700" ng-click="findphonerate()">
+                                    <span class="visible-lg visible-md">FIND RATES</span><i class="visible-xs visible-sm fa fa-search size-30"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                    <!-- Rates Data Will Load Here-->
+                    <ul class="col-sm-12 countryRates" id="ratesList">
+                        <li ng-repeat="rate in rates track by $index">{{rate.destination}} (+{{rate.phone}}) - {{rate.rate}} cents/min</li>
+                    </ul>
+
+                </div>
+
+                <!-- /SEARCH -->
+
+            </div>
+        </section>
+        <!-- / -->
+        <section style=' background-color: #f9fafc;'>
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-12 col-sm-12" style="background-image:url('assets/images/world-map2.png'); background-repeat: repeat;background-size: cover;">
+                        <h2 class='col-sm-12 text-center margin-bottom-40 weight-400 size-40'>Popular Countries</h2>
+                        <div class='col-sm-3 margin-bottom-20' >
+                            <div class='col-sm-12 no-margin padding-0'>
+                                <div class='col-sm-12 no-margin  padding-0 text-center ' >
+                                    <h4 class='col-sm-12 no-margin margin-bottom-2 padding-0 font-size-18'> United States </h4>
+                                    <div class='col-sm-12 no-margin' style='padding:25%; padding-top:0;padding-bottom:0;'>
+                                        <a href="cheap-calls-to/united-states.html"><img class="img-responsive" src="assets/images/flag/us.png" alt="flag of united states" /></a>
+                                    </div>
+                                    <!-- <span class='col-sm-12 margin-top-10 padding-0'>from <span style='color:#eb3849;font-weight:bold'>1.5 Cents/Min </span></span> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class='col-sm-3 margin-bottom-20'>
+                            <div class='col-sm-12 no-margin padding-0'>
+                                <div class='col-sm-12 no-margin   padding-0 text-center '>
+                                    <h4 class='col-sm-12 no-margin margin-bottom-2 padding-0 font-size-18'> Canada </h4>
+                                    <div class='col-sm-12 no-margin' style='padding:25%; padding-top:0;padding-bottom:0;'>
+                                        <a href="cheap-calls-to/canada.html"><img class="img-responsive" src="assets/images/flag/ca.png" alt="flag of canada"/></a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class='col-sm-3 margin-bottom-20'>
+                            <div class='col-sm-12 no-margin padding-0'>
+                                <div class='col-sm-12 no-margin  padding-0 text-center '>
+                                    <h4 class='col-sm-12 no-margin margin-bottom-2 padding-0 font-size-18'> India </h4>
+                                    <div class='col-sm-12 no-margin' style='padding:25%; padding-top:0;padding-bottom:0;'>
+                                        <a href="cheap-calls-to/india.html"><img class="img-responsive" src="assets/images/flag/in.png" alt="flag of india"/></a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class='col-sm-3 margin-bottom-20'>
+                            <div class='col-sm-12 no-margin padding-0'>
+                                <div class='col-sm-12 no-margin  padding-0 text-center '>
+                                    <h4 class='col-sm-12 no-margin margin-bottom-2 padding-0 font-size-18'> United Kingdom </h4>
+                                    <div class='col-sm-12 no-margin' style='padding:25%; padding-top:0;padding-bottom:0;'>
+                                        <a href="cheap-calls-to/united-kingdom.html"><img class="img-responsive" src="assets/images/flag/gb.png" alt="flag of united kingdom"/></a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class='col-sm-12 no-margin margin-bottom-100 hidden-xs hidden-sm'> </div>
+                        <div class='col-sm-3 margin-bottom-20'>
+                            <div class='col-sm-12 no-margin padding-0'>
+                                <div class='col-sm-12 no-margin  padding-0 text-center '>
+                                    <h4 class='col-sm-12  no-margin margin-bottom-2 padding-0 font-size-18'> Mexico </h4>
+                                    <div class='col-sm-12 no-margin' style='padding:25%; padding-top:0;padding-bottom:0;'>
+                                        <a href="cheap-calls-to/mexico.html"><img class="img-responsive" src="assets/images/flag/mx.png" alt="flag of mexico"/></a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class='col-sm-3 margin-bottom-20'>
+                            <div class='col-sm-12 no-margin padding-0'>
+                                <div class='col-sm-12 no-margin  padding-0 text-center '>
+                                    <h4 class='col-sm-12 no-margin margin-bottom-2 padding-0 font-size-18'>China </h4>
+                                    <div class='col-sm-12 no-margin' style='padding:25%; padding-top:0;padding-bottom:0;'>
+                                        <a href="cheap-calls-to/china.html"><img class="img-responsive" src="assets/images/flag/cn.png" alt="flag of china"/></a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class='col-sm-3 margin-bottom-20'>
+                            <div class='col-sm-12 no-margin padding-0'>
+                                <div class='col-sm-12 no-margin   padding-0 text-center '>
+                                    <h4 class='col-sm-12 no-margin margin-bottom-2 padding-0 font-size-18'>Australia</h4>
+                                    <div class='col-sm-12 no-margin' style='padding:25%; padding-top:0;padding-bottom:0;'>
+                                        <a href="cheap-calls-to/australia.html"><img class="img-responsive" src="assets/images/flag/au.png" alt="flag of australia"/></a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class='col-sm-3 margin-bottom-20'>
+                            <div class='col-sm-12 no-margin padding-0'>
+                                <div class='col-sm-12 no-margin   padding-0 text-center '>
+                                    <h4 class='col-sm-12 no-margin margin-bottom-2 padding-0 font-size-18'>Germany</h4>
+                                    <div class='col-sm-12 no-margin' style='padding:25%; padding-top:0;padding-bottom:0;'>
+                                        <a href="cheap-calls-to/germany.html"><img class="img-responsive" src="assets/images/flag/de.png" alt="flag of germany"/></a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="col-md-12 col-sm-12 text-center margin-top-30">
+                            <a class='btn btn-default btn-lg scrollTo' href='#checkrates'>See All Countries</a>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </section>
+        <!-- PARALLAX -->
+        <section class="parallax parallax-2 " style="background-color:#EB3849; /*background-image: url('assets/images/devise-red-bg.jpg'); background-repeat: repeat;*/">
+
+
+            <div class="container">
+                <header class="margin-bottom-20">
+                    <h2 class='col-sm-12 text-center margin-bottom-40 weight-400 size-40'>Pay As You Go With TringMe Credit</h2>
+
+                </header>
+                <div class="col-md-6 col-sm-6">
+                    <ul class="list-unstyled">
+
+                        <li class="margin-bottom-10 visible-lg visible-md" style="font-size:18px"><i class="fa fa-check"></i>Add credit and use it on web and mobile app</li>
+                        <li class="margin-bottom-10" style="font-size:18px"><i class="fa fa-check"></i>Pay as little as $5 for international calls</li>
+                        <li class="margin-bottom-10" style="font-size:18px"><i class="fa fa-check"></i>Call any mobiles and landlines</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-sm-6">
+
+                    <ul class="list-unstyled">
+                        <li class="margin-bottom-10" style="font-size:18px"><i class="fa fa-check"></i>No hidden charges, No connection fees</li>
+                        <li class="margin-bottom-10" style="font-size:18px"><i class="fa fa-check"></i>What you see is what you pay</li>
+                        <li class="margin-bottom-10 visible-lg visible-md" style="font-size:18px"><i class="fa fa-check"></i>Safe & Secure Payment Method</li>
+                    </ul>
+                </div>
+                <div class='col-sm-12 text-center'>
+                    <a class="btn btn-default btn-lg margin-top-30" href="/login/#/payment" style='background-color:#fff; color:#EB3849; border:#fff;'>Buy Credits</a>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- /PARALLAX -->
+        <!-- CALLOUT -->
+        <div class="alert alert-transparent bordered-bottom nomargin">
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-9 col-sm-12">
+                        <!-- left text -->
+                        <h3>Its Quick And Easy To Pay</h3>
+                        <p class="font-lato weight-300 size-18 nomargin-bottom">
+                            We Support Credit Card, Paypal And Net Banking Payment Methods Including In-Store Vouchers. Check To See What's Available In Your Country
+                        </p>
+                    </div><!-- /left text -->
+
+
+                    <div class="col-md-3 col-sm-12 text-right">
+                        <!-- right btn -->
+                        <i class="fa fa-paypal ico-rounded ico-hover"></i>
+                        <i class="fa fa-credit-card ico-rounded ico-hover"></i>
+                        <i class="et-browser ico-rounded ico-hover"></i>
+                    </div><!-- /right btn -->
+
+                </div>
+
+            </div>
+        </div>
+        <!-- /CALLOUT -->
+        <div class="callout alert alert-transparent noborder noradius nomargin" style=' background-color: #f9fafc;'>
+
+            <div class="text-center">
+
+                <h3>Sign Up Now and<span><strong> Get Your First International Call FREE</strong></span> up to 2 Minutes</h3>
+               
+                 <a class="btn btn-success btn-xlg  margin-top-30 size-20 browser wow fadeIn visible-lg-inline-block visible-md-inline-block" href="/login"><i class='fa fa-desktop margin-right-10'></i>Get it on Browser</a>
+				<a target='_blank' class="btn btn-success btn-xlg  margin-top-30 size-20 wow fadeIn apple visible-xs visible-sm"  href="https://itunes.apple.com/app/apple-store/id1050425742?pt=117979707&ct=tringmeweb&mt=8" ng-show="visibleOnIOS();" onclick="analytics('send', 'event', 'ios', 'click', 'callout');"><i class='fa fa-apple margin-right-10'></i>Get it on iPhone</a>
+				<a target='_blank' class="btn btn-success btn-xlg  margin-top-30 size-20 wow fadeIn android visible-xs visible-sm" href="https://play.google.com/store/apps/details?id=com.tringme.android&referrer=utm_source%3Dtringmeweb" ng-show="visibleOnAndroid();" onclick="analytics('send', 'event', 'android', 'click', 'callout');"><i class='fa fa-android margin-right-10'></i>Get it on Android</a>
+
+            </div>
+
+        </div>
+        <!-- /CALLOUT -->
+        <div id='checkrates' class="alert alert-transparent bordered-bottom ">
+            <div class="container">
+                <div class="row">
+                    <h2 class='text-center col-sm-12 margin-bottom-40 margin-top-20'>
+                        Check International call rates of all the countries
+                    </h2>
+                    <div class="col-md-2 col-sm-2 col-xs-12 checked-countries">
+                        <p class="heading">a</p>
+			<a href="cheap-calls-to/afghanistan.html">Afghanistan</a>
+			<a href="cheap-calls-to/albania.html">Albania</a>
+			<a href="cheap-calls-to/algeria.html">Algeria</a>
+			<a href="cheap-calls-to/american-samoa.html">American Samoa</a>
+			<a href="cheap-calls-to/andorra.html">Andorra</a>
+			<a href="cheap-calls-to/angola.html">Angola</a>
+			<a href="cheap-calls-to/anguilla.html">Anguilla</a>
+			<a href="cheap-calls-to/antigua-and-barbuda.html">Antigua and Barbuda</a>
+			<a href="cheap-calls-to/argentina.html">Argentina</a>
+			<a href="cheap-calls-to/armenia.html">Armenia</a>
+			<a href="cheap-calls-to/aruba.html">Aruba</a>
+			<a href="cheap-calls-to/australia.html">Australia</a>
+			<a href="cheap-calls-to/austria.html">Austria</a>
+			<a href="cheap-calls-to/azerbaijan.html">Azerbaijan</a>
+                        <div class='col-sm-12 padding-10'></div>
+                        <p class="heading">b</p>
+			<a href="cheap-calls-to/bahamas.html">Bahamas</a>
+			<a href="cheap-calls-to/bahrain.html">Bahrain</a>
+			<a href="cheap-calls-to/bangladesh.html">Bangladesh</a>
+			<a href="cheap-calls-to/barbados.html">Barbados</a>
+			<a href="cheap-calls-to/belarus.html">Belarus</a>
+			<a href="cheap-calls-to/belgium.html">Belgium</a>
+			<a href="cheap-calls-to/belize.html">Belize</a>
+			<a href="cheap-calls-to/benin.html">Benin</a>
+			<a href="cheap-calls-to/bermuda.html">Bermuda</a>
+			<a href="cheap-calls-to/bhutan.html">Bhutan</a>
+			<a href="cheap-calls-to/bolivia.html">Bolivia</a>
+			<a href="cheap-calls-to/bosnia-and-herzegovina.html">Bosnia and Herzegovina</a>
+			<a href="cheap-calls-to/botswana.html">Botswana</a>
+			<a href="cheap-calls-to/brazil.html">Brazil</a>
+			<a href="cheap-calls-to/british-indian-ocean-territory.html">British Indian Ocean Territory</a>
+			<a href="cheap-calls-to/brunei-darussalam.html">Brunei Darussalam</a>
+			<a href="cheap-calls-to/bulgaria.html">Bulgaria</a>
+			<a href="cheap-calls-to/burkina-faso.html">Burkina Faso</a>
+			<a href="cheap-calls-to/burundi.html">Burundi</a>
+                        <div class='col-sm-12 padding-10'></div>
+                        <p class="heading">c</p>
+			<a href="cheap-calls-to/cambodia.html">Cambodia</a>
+			<a href="cheap-calls-to/cameroon.html">Cameroon</a>
+			<a href="cheap-calls-to/canada.html">Canada</a>
+			<a href="cheap-calls-to/cape-verde.html">Cape Verde</a>
+			<a href="cheap-calls-to/cayman-islands.html">Cayman Islands</a>
+			<a href="cheap-calls-to/central-african-republic.html">Central African Rep.</a>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-12 checked-countries pad-t20">
+		        <a href="cheap-calls-to/chad.html">Chad</a>
+			<a href="cheap-calls-to/chile.html">Chile</a>
+			<a href="cheap-calls-to/china.html">China</a>
+			<a href="cheap-calls-to/colombia.html">Colombia</a>
+			<a href="cheap-calls-to/comoros.html">Comoros</a>
+			<a href="cheap-calls-to/congo.html">Congo</a>
+			<a href="cheap-calls-to/congo,-the-democratic-republic-of-the.html">Congo, the Democratic Rep. of the</a>
+			<a href="cheap-calls-to/cook-islands.html">Cook Islands</a>
+			<a href="cheap-calls-to/costa-rica.html">Costa Rica</a>
+			<a href="cheap-calls-to/croatia.html">Croatia</a>
+			<a href="cheap-calls-to/cuba.html">Cuba</a>
+			<a href="cheap-calls-to/cyprus.html">Cyprus</a>
+			<a href="cheap-calls-to/czech-republic.html">Czech Republic</a>
+
+                        <div class='col-sm-12 padding-10'></div>
+                        <p class="heading">d</p>
+			<a href="cheap-calls-to/denmark.html">Denmark</a>
+			<a href="cheap-calls-to/djibouti.html">Djibouti</a>
+			<a href="cheap-calls-to/dominica.html">Dominica</a>
+			<a href="cheap-calls-to/dominican-republic.html">Dominican Republic</a>
+
+                        <div class='col-sm-12 padding-10'></div>
+                        <p class="heading">e</p>
+			<a href="cheap-calls-to/ecuador.html">Ecuador</a>
+			<a href="cheap-calls-to/egypt.html">Egypt</a>
+			<a href="cheap-calls-to/el-salvador.html">El Salvador</a>
+			<a href="cheap-calls-to/equatorial-guinea.html">Equatorial Guinea</a>
+			<a href="cheap-calls-to/eritrea.html">Eritrea</a>
+			<a href="cheap-calls-to/estonia.html">Estonia</a>
+			<a href="cheap-calls-to/ethiopia.html">Ethiopia</a>
+                        <div class='col-sm-12 padding-10'></div>
+                        <p class="heading">f</p>
+			<a href="cheap-calls-to/falkland-islands-(malvinas).html">Falkland Isl (Malvinas)</a>
+			<a href="cheap-calls-to/faroe-islands.html">Faroe Islands</a>
+			<a href="cheap-calls-to/fiji.html">Fiji</a>
+			<a href="cheap-calls-to/finland.html">Finland</a>
+			<a href="cheap-calls-to/france.html">France</a>
+			<a href="cheap-calls-to/french-guiana.html">French Guiana</a>
+			<a href="cheap-calls-to/french-polynesia.html">French Polynesia</a>
+			<a href="cheap-calls-to/french-southern-territories.html">French Southern Territories</a>
+                        <div class='col-sm-12 padding-10'></div>
+                        <p class="heading">g</p>
+			<a href="cheap-calls-to/gabon.html">Gabon</a>
+			<a href="cheap-calls-to/gambia.html">Gambia</a>
+			<a href="cheap-calls-to/georgia.html">Georgia</a>
+			<a href="cheap-calls-to/germany.html">Germany</a>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-12 checked-countries pad-t20">
+			<a href="cheap-calls-to/ghana.html">Ghana</a>
+		    	<a href="cheap-calls-to/gibraltar.html">Gibraltar</a>
+			<a href="cheap-calls-to/greece.html">Greece</a>
+			<a href="cheap-calls-to/greenland.html">Greenland</a>
+			<a href="cheap-calls-to/grenada.html">Grenada</a>
+			<a href="cheap-calls-to/guadeloupe.html">Guadeloupe</a>
+			<a href="cheap-calls-to/guam.html">Guam</a>
+			<a href="cheap-calls-to/guatemala.html">Guatemala</a>
+			<a href="cheap-calls-to/guinea.html">Guinea</a>
+			<a href="cheap-calls-to/guinea-bissau.html">Guinea-Bissau</a>
+			<a href="cheap-calls-to/guyana.html">Guyana</a>
+                        <div class='col-sm-12 padding-10'></div>
+                        <p class="heading">h</p>
+			<a href="cheap-calls-to/haiti.html">Haiti</a>
+			<a href="cheap-calls-to/honduras.html">Honduras</a>
+			<a href="cheap-calls-to/hong-kong.html">Hong Kong</a>
+			<a href="cheap-calls-to/hungary.html">Hungary</a>
+                        <div class='col-sm-12 padding-10'></div>
+                        <p class="heading">i</p>
+			<a href="cheap-calls-to/iceland.html">Iceland</a>
+			<a href="cheap-calls-to/india.html">India</a>
+			<a href="cheap-calls-to/indonesia.html">Indonesia</a>
+			<a href="cheap-calls-to/iran,-islamic-republic-of.html">Iran</a>
+			<a href="cheap-calls-to/iraq.html">Iraq</a>
+			<a href="cheap-calls-to/ireland.html">Ireland</a>
+			<a href="cheap-calls-to/israel.html">Israel</a>
+			<a href="cheap-calls-to/italy.html">Italy</a>
+			<a href="cheap-calls-to/ivory-coast.html">Ivory Coast</a>
+                        <div class='col-sm-12 padding-10'></div>
+                        <p class="heading">j</p>
+			<a href="cheap-calls-to/jamaica.html">Jamaica</a>
+			<a href="cheap-calls-to/japan.html">Japan</a>
+			<a href="cheap-calls-to/jordan.html">Jordan</a>
+
+                        <div class='col-sm-12 padding-10'></div>
+                        <p class="heading">k</p>
+			<a href="cheap-calls-to/kazakhstan.html">Kazakhstan</a>
+			<a href="cheap-calls-to/kenya.html">Kenya</a>
+			<a href="cheap-calls-to/kiribati.html">Kiribati</a>
+			<a href="cheap-calls-to/kuwait.html">Kuwait</a>
+			<a href="cheap-calls-to/kyrgyzstan.html">Kyrgyzstan</a>
+                        <div class='col-sm-12 padding-10'></div>
+                        <p class="heading">l</p>
+			<a href="cheap-calls-to/laos.html">Laos</a>
+			<a href="cheap-calls-to/latvia.html">Latvia</a>
+			<a href="cheap-calls-to/lebanon.html">Lebanon</a>
+			<a href="cheap-calls-to/lesotho.html">Lesotho</a>
+			<a href="cheap-calls-to/liberia.html">Liberia</a>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-12 checked-countries pad-t20">
+			<a href="cheap-calls-to/libyan-arab-jamahiriya.html">Libya</a>
+		    	<a href="cheap-calls-to/liechtenstein.html">Liechtenstein</a>
+			<a href="cheap-calls-to/lithuania.html">Lithuania</a>
+			<a href="cheap-calls-to/luxembourg.html">Luxembourg</a>
+                        <div class='col-sm-12 padding-10'></div>
+                        <p class="heading">M</p>
+			<a href="cheap-calls-to/macao.html">Macao</a>
+			<a href="cheap-calls-to/madagascar.html">Madagascar</a>
+			<a href="cheap-calls-to/malawi.html">Malawi</a>
+			<a href="cheap-calls-to/malaysia.html">Malaysia</a>
+			<a href="cheap-calls-to/maldives.html">Maldives</a>
+			<a href="cheap-calls-to/mali.html">Mali</a>
+			<a href="cheap-calls-to/malta.html">Malta</a>
+			<a href="cheap-calls-to/marshall-islands.html">Marshall Islands</a>
+			<a href="cheap-calls-to/martinique.html">Martinique</a>
+			<a href="cheap-calls-to/mauritania.html">Mauritania</a>
+			<a href="cheap-calls-to/mauritius.html">Mauritius</a>
+			<a href="cheap-calls-to/mayotte.html">Mayotte</a>
+			<a href="cheap-calls-to/mexico.html">Mexico</a>
+			<a href="cheap-calls-to/micronesia,-federated-states-of.html">Micronesia, Federated States of</a>
+			<a href="cheap-calls-to/moldova,-republic-of.html">Moldova</a>
+			<a href="cheap-calls-to/monaco.html">Monaco</a>
+			<a href="cheap-calls-to/mongolia.html">Mongolia</a>
+			<a href="cheap-calls-to/montenegro.html">Montenegro</a>
+			<a href="cheap-calls-to/montserrat.html">Montserrat</a>
+			<a href="cheap-calls-to/morocco.html">Morocco</a>
+			<a href="cheap-calls-to/mozambique.html">Mozambique</a>
+			<a href="cheap-calls-to/myanmar.html">Myanmar</a>
+
+                        <div class='col-sm-12 padding-10'></div>
+                        <p class="heading">n</p>
+			<a href="cheap-calls-to/namibia.html">Namibia</a>
+			<a href="cheap-calls-to/nauru.html">Nauru</a>
+			<a href="cheap-calls-to/nepal.html">Nepal</a>
+			<a href="cheap-calls-to/netherlands.html">Netherlands</a>
+			<a href="cheap-calls-to/netherlands-antilles.html">Netherlands Antilles</a>
+			<a href="cheap-calls-to/new-caledonia.html">New Caledonia</a>
+			<a href="cheap-calls-to/new-zealand.html">New Zealand</a>
+			<a href="cheap-calls-to/nicaragua.html">Nicaragua</a>
+			<a href="cheap-calls-to/niger.html">Niger</a>
+			<a href="cheap-calls-to/nigeria.html">Nigeria</a>
+			<a href="cheap-calls-to/niue.html">Niue</a>
+			<a href="cheap-calls-to/north-korea.html">North Korea</a>
+			<a href="cheap-calls-to/northern-mariana-islands.html">Northern Mariana Isl</a>
+			<a href="cheap-calls-to/norway.html">Norway</a>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-12 checked-countries pad-t20">
+                        <p class="heading">o</p>
+			<a href="cheap-calls-to/oman.html">Oman</a>
+                        <div class='col-sm-12 padding-10'></div>
+                        <p class="heading">p</p>
+			<a href="cheap-calls-to/pakistan.html">Pakistan</a>
+			<a href="cheap-calls-to/palau.html">Palau</a>
+			<a href="cheap-calls-to/panama.html">Panama</a>
+			<a href="cheap-calls-to/papua-new-guinea.html">Papua New Guinea</a>
+			<a href="cheap-calls-to/paraguay.html">Paraguay</a>
+			<a href="cheap-calls-to/peru.html">Peru</a>
+			<a href="cheap-calls-to/philippines.html">Philippines</a>
+			<a href="cheap-calls-to/poland.html">Poland</a>
+			<a href="cheap-calls-to/portugal.html">Portugal</a>
+			<a href="cheap-calls-to/puerto-rico.html">Puerto Rico</a>
+                        <div class='col-sm-12 padding-10'></div>
+                        <p class="heading">q</p>
+			<a href="cheap-calls-to/qatar.html">Qatar</a>
+                        <div class='col-sm-12 padding-10'></div>
+                        <p class="heading">r</p>
+			<a href="cheap-calls-to/romania.html">Romania</a>
+			<a href="cheap-calls-to/russian-federation.html">Russian Federation</a>
+			<a href="cheap-calls-to/rwanda.html">Rwanda</a>
+                        <div class='col-sm-12 padding-10'></div>
+                        <p class="heading">s</p>
+			<a href="cheap-calls-to/saint-helena.html">Saint Helena</a>
+			<a href="cheap-calls-to/saint-kitts-and-nevis.html">Saint Kitts and Nevis</a>
+			<a href="cheap-calls-to/saint-lucia.html">Saint Lucia</a>
+			<a href="cheap-calls-to/saint-pierre-and-miquelon.html">Saint Pierre and Miquelon</a>
+			<a href="cheap-calls-to/saint-vincent-and-the-grenadines.html">Saint Vincent and the Grenadines</a>
+			<a href="cheap-calls-to/samoa.html">Samoa</a>
+			<a href="cheap-calls-to/san-marino.html">San Marino</a>
+			<a href="cheap-calls-to/sao-tome-and-principe.html">Sao Tome and Principe</a>
+			<a href="cheap-calls-to/saudi-arabia.html">Saudi Arabia</a>
+			<a href="cheap-calls-to/senegal.html">Senegal</a>
+			<a href="cheap-calls-to/serbia.html">Serbia</a>
+			<a href="cheap-calls-to/seychelles.html">Seychelles</a>
+			<a href="cheap-calls-to/sierra-leone.html">Sierra Leone</a>
+			<a href="cheap-calls-to/singapore.html">Singapore</a>
+			<a href="cheap-calls-to/slovakia.html">Slovakia</a>
+			<a href="cheap-calls-to/slovenia.html">Slovenia</a>
+			<a href="cheap-calls-to/solomon-islands.html">Solomon Isl</a>
+			<a href="cheap-calls-to/somalia.html">Somalia</a>
+			<a href="cheap-calls-to/south-africa.html">South Africa</a>
+			<a href="cheap-calls-to/south-korea.html">South Korea</a>
+			<a href="cheap-calls-to/spain.html">Spain</a>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-12 checked-countries pad-t20">
+			<a href="cheap-calls-to/sri-lanka.html">Sri Lanka</a>
+			<a href="cheap-calls-to/sudan.html">Sudan</a>
+			<a href="cheap-calls-to/suriname.html">Suriname</a>
+			<a href="cheap-calls-to/swaziland.html">Swaziland</a>
+			<a href="cheap-calls-to/sweden.html">Sweden</a>
+			<a href="cheap-calls-to/switzerland.html">Switzerland</a>
+			<a href="cheap-calls-to/syrian-arab-republic.html">Syria</a>
+                        <div class='col-sm-12 padding-10'></div>
+                        <p class="heading">t</p>
+			<a href="cheap-calls-to/taiwan.html">Taiwan</a>
+			<a href="cheap-calls-to/tajikistan.html">Tajikistan</a>
+			<a href="cheap-calls-to/tanzania,-united-republic-of.html">Tanzania</a>
+			<a href="cheap-calls-to/thailand.html">Thailand</a>
+			<a href="cheap-calls-to/togo.html">Togo</a>
+			<a href="cheap-calls-to/tokelau.html">Tokelau</a>
+			<a href="cheap-calls-to/tonga.html">Tonga</a>
+			<a href="cheap-calls-to/trinidad-and-tobago.html">Trinidad and Tobago</a>
+			<a href="cheap-calls-to/tunisia.html">Tunisia</a>
+			<a href="cheap-calls-to/turkey.html">Turkey</a>
+			<a href="cheap-calls-to/turkmenistan.html">Turkmenistan</a>
+			<a href="cheap-calls-to/turks-and-caicos-islands.html">Turks and Caicos Isl</a>
+			<a href="cheap-calls-to/tuvalu.html">Tuvalu</a>
+
+                        <div class='col-sm-12 padding-10'></div>
+                        <p class="heading">u</p>
+			<a href="cheap-calls-to/uganda.html">Uganda</a>
+			<a href="cheap-calls-to/ukraine.html">Ukraine</a>
+			<a href="cheap-calls-to/united-arab-emirates.html">United Arab Emirates</a>
+			<a href="cheap-calls-to/united-kingdom.html">United Kingdom</a>
+			<a href="cheap-calls-to/united-states.html">United States</a>
+			<a href="cheap-calls-to/uruguay.html">Uruguay</a>
+			<a href="cheap-calls-to/uzbekistan.html">Uzbekistan</a>
+
+                        <div class='col-sm-12 padding-10'></div>
+                        <p class="heading">v</p>
+			<a href="cheap-calls-to/vanuatu.html">Vanuatu</a>
+			<a href="cheap-calls-to/venezuela.html">Venezuela</a>
+			<a href="cheap-calls-to/viet-nam.html">Viet Nam</a>
+                        <div class='col-sm-12 padding-10'></div>
+                        <p class="heading">w</p>
+			<a href="cheap-calls-to/wallis-and-futuna.html">Wallis and Futuna</a>
+                        <div class='col-sm-12 padding-10'></div>
+                        <p class="heading">y</p>
+			<a href="cheap-calls-to/yemen.html">Yemen</a>
+                        <div class='col-sm-12 padding-10'></div>
+                        <p class="heading">z</p>
+			<a href="cheap-calls-to/zambia.html">Zambia</a>
+			<a href="cheap-calls-to/zimbabwe.html">Zimbabwe</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer id="footer">
+		<div class="container">
+		<tringmesection cref="footer.html">
+                <div class="row" id="desktopFooter">
+
+                 <div class="col-md-2">
+			 <div class="togglef toggle-transparent-body toggle-margin-top-0">
+
+			    <div class="togglef footer active">
+					<label>About</label>
+					<div class="toggle-content">
+						<ul class="footer-links list-unstyled">
+							<li><a href="about-us.html">TringMe</a></li>
+							<li><a href="career.html">Career</a></li>
+							<li><a href="news.html">In News</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+        </div>
+        <div class="col-md-3">
+			<div class="togglef toggle-transparent-body toggle-margin-top-0">
+
+				<div class="togglef footer">
+					<label>Explore TringMe</label>
+					<div class="toggle-content">
+						<ul class="footer-links list-unstyled">
+							<li><a href="international-call-rates.html">International Call Rates</a></li>
+							<li><a href="referral-program.html">Earn Bonus Credits</a></li>
+							<li><a href="developer/overview.html">Developer</a></li>
+							<li><a href="developer/wholesale-voip.html">Wholesale VoIP</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+            
+        </div>
+        <div class="col-md-3">
+			<div class="togglef toggle-transparent-body toggle-margin-top-0">
+
+				<div class="togglef footer">
+					<label>Help</label>
+					<div class="toggle-content">
+						<ul class="footer-links list-unstyled">
+							<!-- <li><a href="how-to-use-tringme.html">How To Use</a></li> -->
+							<li><a href="faq.html">FAQ</a></li>
+							<li><a href="contact-support.html">Support</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+        </div>
+        <div class="col-md-4">
+
+            <!-- Newsletter Form -->
+            <div class="col-sm-6 padding-20 padding-left-0" style='padding-left:0px !important;padding-top: 0px !important;'>
+                <a target='_blank' href='https://play.google.com/store/apps/details?id=com.tringme.android&referrer=utm_source%3Dtringmeweb'><img src='assets/images/google-play-store.png' alt="TringMe international calling app for android"/></a>
+            </div>
+            <div class="col-sm-6 padding-20" style='padding-left:0px !important;padding-top: 0px !important;'>
+                <a target='_blank' href='https://itunes.apple.com/app/apple-store/id1050425742?pt=117979707&ct=tringmeweb&mt=8'><img src='assets/images/apple-store.png' alt="TringMe international calling app for iPhone"/></a>
+            </div>
+            <h4 class="letter-spacing-1 col-sm-12 no-margin padding-0">Stay Connected</h4>
+
+
+
+            <!-- Social Icons -->
+            <div class="margin-top-20">
+                <a href="https://facebook.com/tringme" class="social-icon social-icon-round social-icon-border social-facebook"  data-placement="bottom" title="Facebook">
+                    <i class="icon-facebook"></i>
+                </a>
+                <a href="https://twitter.com/tringme" class="social-icon social-icon-round social-icon-border social-twitter"  data-placement="top" title="Twitter">
+                    <i class="icon-twitter"></i>
+                </a>
+                <a href="https://plus.google.com/+Tringme" class="social-icon social-icon-round social-icon-border social-gplus"  data-placement="top" title="Google+">
+                     <i class="icon-gplus"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/tringme" class="social-icon social-icon-round social-icon-border social-linkedin" data-placement="top" title="LinkedIn">
+                    <i class="icon-linkedin"></i>
+                </a>
+                <a href="#" class="social-icon social-icon-round social-icon-border social-youtube"  data-placement="top" title="Youtube">
+                    <i class="icon-youtube"></i>
+                </a>
+
+
+
+
+
+            </div>
+            <!-- /Social Icons -->
+            <div class='col-sm-12'>
+
+            </div>
+        </div>
+        <div class='col-sm-12 margin-top-30 '>
+            <p class='margin-bottom-10 size-13'><img src="assets/images/footer-no-emergency-call.png" alt="no emergency call"><span>  No emergency calls with TringMe</span></p>
+            <p class='margin-bottom-10 size-13'>TringMe is not a replacement for your telephone and can't be used for emergency calling</p>
+        </div>
+       
+    </div>
+	</tringmesection>
+            	</div>
+            	<div class="copyright">
+                <div class="container">
+				<tringmesection cref="last_footer.html">
+                    <ul class="pull-right nomargin list-inline mobile-block margin-top-5">
+            <li><a href="terms-of-use.html#privacy">Privacy</a></li>
+            <li>&bull;</li>
+            <li><a href="terms-of-use.html#terms">Terms of services</a></li>
+            <li>&bull;</li>
+           <!--  <li><a href="#">Blog</a></li>
+            <li>&bull;</li> -->
+            <li><a href="sitemap.html">Sitemap</a></li>
+            <li>&bull;</li>
+            <li><a href="contact.html">Contact us</a></li>
+
+        </ul>
+        <img style='margin-right:10px;' src="assets/images/footer-logo.png" alt="TringMe icon"/>&copy; 2016 TringMe. All rights reserved.
+					</tringmesection>
+                </div>
+            </div>
+        </footer>
+        <!-- /FOOTER -->
+
+    </div>
+    <!-- /wrapper -->
+    <!-- SCROLL TO TOP -->
+    <a href="#" id="toTop"></a>
+
+
+    <!-- PRELOADER -->
+
+    <div id="preloader">
+        <div class="inner">
+            <span class="loader"></span>
+        </div>
+    </div><!-- /PRELOADER -->
+    <!-- JAVASCRIPT FILES -->
+    <script type="text/javascript">var plugin_path = 'assets/plugins/';</script>
+    <script type="text/javascript" src="assets/plugins/jquery/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="assets/js/scripts.js"></script>
+    <!-- REVOLUTION SLIDER -->
+    <script type="text/javascript" src="assets/plugins/slider.revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/slider.revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="assets/js/view/demo.revolution_slider.js"></script>
+   
+    <script src="assets/js/tringme.js"></script>
+    <script src="assets/js/angucomplete-alt.js"></script>
+    <script src="assets/js/countries.js"></script>
+	
+<!-- Google Code for Remarketing Tag -->
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 1029092401;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1029092401/?value=0&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+<!-- Google Code for Remarketing Tag Ends -->
+
+</body>
+</html>

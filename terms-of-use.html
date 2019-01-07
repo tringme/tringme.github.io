@@ -1,0 +1,525 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]>			<html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>			<html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8" />
+    <title>Tringme | Terms of Use & Privacy Policy</title>
+    <meta name="keywords" content="TringMe, Terms of Use, Privacy Policy" />
+    <meta name="description" content="TringMe terms of use and privacy policy" />
+	<meta name="robots" content="noarchive">
+    <meta name="Author" content="https://tringme.com" />
+
+    <!-- mobile settings -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <!-- WEB FONTS : use %7C instead of | (pipe) -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+
+    <!-- CORE CSS -->
+    <link href="assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+
+    <!-- THEME CSS -->
+    <link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+    <!-- PAGE LEVEL SCRIPTS -->
+    <link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/color_scheme/red.css" rel="stylesheet" type="text/css" id="color_scheme" />
+
+    <!-- REVOLUTION SLIDER -->
+    <link href="assets/plugins/slider.revolution/css/extralayers.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/slider.revolution/css/settings.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="https://api.tringme.com/tringmewebapi.js"></script>
+    <link href="assets/css/angucomplete-alt.css" rel="stylesheet">
+	
+	<!-- FEVICON -->
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="TringMe"/>
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+	
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','analytics');
+
+		analytics('create', 'UA-74062941-1', 'auto');
+		analytics('send', 'pageview');
+	</script>
+	
+</head>
+
+<!--
+    AVAILABLE BODY CLASSES:
+
+    smoothscroll 			= create a browser smooth scroll
+    enable-animation		= enable WOW animations
+
+    bg-grey					= grey background
+    grain-grey				= grey grain background
+    grain-blue				= blue grain background
+    grain-green				= green grain background
+    grain-blue				= blue grain background
+    grain-orange			= orange grain background
+    grain-yellow			= yellow grain background
+
+    boxed 					= boxed layout
+    pattern1 ... patern11	= pattern background
+    menu-vertical-hide		= hidden, open on click
+
+    BACKGROUND IMAGE [together with .boxed class]
+    data-background="assets/images/boxed_background/1.jpg"
+-->
+<body ng-app="app" class="smoothscroll enable-animation">
+    <!-- wrapper -->
+    <div id="wrapper" ng-controller="MainController">
+
+        <div id="header" class="sticky clearfix">
+
+            <!-- TOP NAV -->
+		<tringmesection cref="header.html">
+            <header id="topNav">
+                <div class="container">
+
+                    <!-- Mobile Menu Button -->
+                    <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Logo -->
+                    <a class="logo pull-left" href="index.html">
+                        <img src="assets/images/tringme-logo.png" alt="tringme logo" /> <!-- light logo -->
+                        <!-- <img src="assets/images/logo_dark.png" alt="" /> --> <!-- dark logo -->
+                    </a>
+		    
+                    <div class="navbar-collapse pull-right nav-main-collapse collapse submenu-dark">
+                        <nav class="nav-main">
+                            <ul id="topMain" class="nav nav-pills nav-main">
+                                <li class="dropdown">
+                                    <a href="index.html">
+                                        Home
+                                    </a>
+
+                                </li>
+                               
+                                <li class="dropdown">
+                                    <a href="international-call-rates.html">
+                                        Rates
+                                    </a>
+                                   
+                                </li>
+                                <li class="dropdown">
+                                    <a href="developer/overview.html">
+                                        Developer
+                                    </a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="help.html">
+                                       
+                                        Help
+                                    </a>
+                                </li>
+
+                                <li class="dropdown ">
+                                    <a href="/login" class="hidden-lg hidden-md">
+                                        {{logintext}}
+                                    </a>
+                                    <a href="/login" class="hidden-xs hidden-sm">
+                                        <span class='btn login'>
+                                            {{logintext}}
+                                        </span>
+                                    </a>
+                                </li>
+                            
+
+                            </ul>
+
+                        </nav>
+                    </div>
+		    
+
+                </div>
+            </header>
+		</tringmesection>
+            <!-- /Top Nav -->
+
+        </div>
+
+        <section class="page-header">
+		
+            <div class="container">
+
+                <h1>Terms of Use & Privacy Policy</h1>
+
+                <!-- breadcrumbs -->
+                <ol class="breadcrumb visible-lg visible-md">
+                    <li><a href="index">Home</a></li>
+                    <li><a href="#">ToS & PP</a></li>
+
+                </ol><!-- /breadcrumbs -->
+
+            </div>
+        </section>
+        <!-- /PAGE HEADER -->
+
+     <div id='terms'>
+    <section class="padding-xs alternate" >
+   		<div class="container" >
+			<div class='col-sm-12'>
+				<h2 >Terms of Use <a class='pLine-height scrollTo ' href='#privacy' >Privacy Policy</a></h2>
+				<hr/>
+				
+				<ol>
+				
+				<h3><li>Terms</h3>
+				<p>By accessing and using TringMe’s website, software and services, you are agreeing to be bound by TringMe’s Terms and Conditions of Use, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site or software. The materials contained in this website are protected by applicable copyright and trademark law.</p>
+				</li>
+				
+				<h3><li>LIMITATION ON WARRANTIES, REMEDIES AND LIABILTY</h3>
+				
+					<p>TringMe is a Voice over IP (VoIP) service and due to the inherent nature of VoIP services, it requires you to use high speed internet services like broadband or other high speed data connection (e.g. 3G/4G). The quality of TringMe services is highly dependent on the quality of internet services you use which we do not provide nor we do have any control over it. In addition, the call quality is also determined by the destination number telecom operators over which also we do not have any control. Although TringMe shall do best to offer you the best available service, you acknowledge that the service is provided without any warranty or assurance of call quality.</p>
+					<ol>
+						<li>The TringMe service and material on TringMe's website are provided "as is". TringMe makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties, including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights. Further, TringMe does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its Internet website or otherwise relating to such materials or on any sites linked to this site.</li><br />
+						 
+						<li>TringMe does not warrant that the service, or software will be without failure, delay, interruption, error, omission, degradation of voice quality, or loss of content, data, or information.</li><br />
+						 
+						<li>TringMe services, including calls and messaging are not intended for emergency or mission-critical systems.</li><br />
+						 
+						<li>TringMe reserves the right, in its sole discretion to restrict, suspend, or terminate your access to all or any part of the TringMe Services at any time, for any or no reason, with or without prior notice, and without liability or refund.</li><br />
+						 
+						<li>You agree to use the Service and Device only for lawful purposes. Use of and Membership in the TringMe Services is void where prohibited. You acknowledge that TringMe reserves the right to charge for the TringMe Services and to change its fees from time to time in its discretion.</li><br />
+						 
+						<li>If TringMe terminates your membership because you have breached the Agreement, you will not be entitled to the refund of any unused portion of subscription fees.</li><br />
+						
+						<li>This license shall automatically terminate if you violate any of these restrictions and may be terminated by TringMe at any time. Upon terminating your viewing of these materials or upon the termination of this license, you must destroy any downloaded materials in your possession whether in electronic or printed format.</li><br />
+					</ol>
+				</li>
+				
+				<h3><li>Billing</h3>
+				
+					<ol>
+						<li>Expiration: TringMe credits that you have purchased shall automatically expire after 6 months (180 days) from the date of purchase.</li><br />
+						<li>Usage of minutes is billed in one minute increments, subject to a minimum call charge of 1 US cents per call.</li><br />
+						<li>Outbound calling rates can be changed anytime without any notice. By using TringMe's services, you agree to checking the rates before using any of TringMe's paid services.</li><br />
+						<li>In order to minimize the risk and safety of your payment, TringMe may ask you to provide the verification of financial documents anytime using TringMe services. This is especially true when you are calling countries where we have experienced fraudulent transactions.</li><br />						
+					</ol>
+				</li>
+				
+				<h3><li>Try-before-you-buy & Refund policy</h3>
+				<p>TringMe offers a complimentary call and test call facility so that you can try before you pay for the service. Hence refund will be approved only under the certain circumstances below. To request refund, you must file a support request from TringMe’s website or mobile softwares.</p>
+				
+					<ol>
+						<li>No refund shall be issued for failure to read our terms-of service or product description before purchasing and thus resulting in dissatisfaction with the product's function and/or results</li><br />
+						<li>No refund shall be issued for any interruption of TringMe services, including international calling services.</li><br />
+						<li>No refunds shall be issued for services paid or credit acquired through vouchers, promotional amounts, transfer from other TringMe users or credit added by TringMe administrators.</li><br />
+						<li>Any promotional credits will be deducted before the refund. The refund amount is calculated as “amount paid - (promotional/bonus credits + call charges)”</li><br />
+						<li>No refund will be issued if you are not able to use services due to blocking VoIP by third parties such as ISP, local telecom, mobile operator  or government authority as mentioned above in <strong>Sec 2</strong> of this terms-of-services. </li><br />
+						<li>No refund shall be issued after 7 days of purchase.</li><br />
+						<li>No refund shall be issued if you have used more than $1 TringMe credits after purchase or attempting to use TringMe services after making refund request.</li><br />
+						<li>In addition, we may not be able to refund all of the taxes that you paid.</li><br />
+						<li>Your account will be closed after refund. </li><br />
+					</ol>
+				</li>
+				
+				
+				<h3><li>Limitations</h3>
+				 <p>In no event shall TringMe or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption,) arising out of the use or inability to use the materials on TringMe's Internet site, even if TringMe or a TringMe authorized representative has been notified orally or in writing of the possibility of such damage. Because some jurisdictions do not allow limitations on implied warranties, or limitations of liability for consequential or incidental damages, the usage of TringMe in not allowed in those jurisdictions.</p>
+				</li>
+				
+				<h3><li>Revisions and Errata</h3>
+				 
+				 <p>The materials appearing on TringMe's website could include technical, typographical, or photographic errors. TringMe does not warrant that any of the materials on its website are accurate, complete, or current. TringMe may make changes to the materials contained on its website at any time without notice. TringMe does not, however, make any commitment to update the materials.</p>
+				
+				</li>
+				
+				<h3><li>Links</h3>
+				 
+				 <p>TringMe has not reviewed all of the sites linked to its Internet website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by TringMe of the site. Use of any such linked website is at the user's own risk.</p>
+				
+				</li>
+				
+				<h3><li>Site Terms of Use Modifications</h3>
+				 
+				 <p>TringMe may revise these terms of use for its website at any time without notice. By using this website you are agreeing to be bound by the then current version of these Terms and Conditions of Use.</p>
+				
+				</li>
+				
+				<h3><li>Governing Law</h3>
+				 
+				<p>Any claim relating to TringMe's services shall be governed by the laws of the India without regard to its conflict of law provisions.</p>
+				<p><strong>General Terms and Conditions applicable to Use of a TringMe.</strong></p>
+				</li>
+			</ol>	 
+				
+				
+				
+				<hr/>
+				<h2 id='privacy'>Privacy Policy <a class='pLine-height scrollTo' href='#terms' >Terms of Use</a></h2>
+					<p> TringMe provides free web and mobile telephony. We care deeply about online privacy. If you have any 
+								questions concerning this privacy policy, please contact us by visiting the "Contact Us" page.</p>  
+								<p>This privacy policy (this "Policy") covers how we treat the personal information that we collect and 
+								receive when you register for and use our telecommunication services (our "Services"). This Policy 
+								explains the practices that apply to your personal information. </p>
+			
+					<h3>Collection of Your Personal Information</h3>
+					  <p> In order to provide our Services, TringMe must collect your personal phone number so we can identify you when you interact
+					  with our system, and to route communications from other users to your phone. We do not reveal your phone number to other TringMe users.
+					  The only time we collect your phone number from you is when you enter your phone number on our website.</p>
+					  <p>The phone number at which you receive calls will be verified to ensure that the person providing the phone number is in possession 
+					  of said phone. Verification of your phone enables other people to call your phone.</p>
+					  <p>We may also collect your email address to send updates, voicemail notification, a newsletter or news regarding the service. 
+					  We collect your email from you when you enter your email into our website.</p>
+					  <p>Verification of your email allows you to receive voicemail messages from other users attempting to contact you.</p>
+					  <p> As part of the registration process, you may be asked to create a username and password to be 
+						associated with your persona for security.  We may also collect your name, country, or time zone to 
+						enhance security/facilitate Services. </p>
+			
+					<h3>Automatic Tracking</h3>
+						  <p>By using our website, we are able to and may track certain non-personally-identifiable information about you and your 
+						  correspondence with the TringMe site in order to perform internal research on our users’ demographics, interests and behavior, 
+						  as well as to monitor and enforce the terms of the Terms of Service Agreement. This information may include the URL from which you 
+						  arrived, your clickpath within the TringMe site, the next URL you may visit, what browser you are using and your IP address.</p>
+						  <p>TringMe uses cookies to store visitors' preferences and to record session information, for purposes including ensuring compliance 
+						  with our terms and policies, to improve the user experience with our services, and to customize Web page and widget content based on 
+						  browser type and user profile information. You may be able to configure your browser to accept or reject all or some cookies, or 
+						  notify you when a cookie is set -- each browser is different, so check the "Help" menu of your browser to learn how to change your 
+						  cookie preferences. Please note that TringMe may allow third party advertisers that are presenting advertisements on some of our 
+						  pages to set and access their cookies on your computer. Advertisers' use of cookies is subject to their own privacy policies, 
+						  not the TringMe Privacy Policy.</p>
+						  <p>Your Personal Information will not be shared with third parties except to provide the services you've requested. In order to 
+						  provide the services you’ve requested, we carefully choose partners to work with. These partners are technology providers of telecom 
+						  services, which are an ingredient in TringMe services. These partners are required to protect your information in a manner consistent 
+						  with this Privacy Policy and do not have any independent right to share your TringMe Information. We may use non-identifying 
+						  information to better design our services. TringMe works with third party advertiser/cookies who may use information about your 
+						  visit to the website to provide them with ads</p>
+						  			
+					<h3>Sharing and Disclosure of Information TringMe Collects</h3>
+						  <p>Except as otherwise described in this privacy statement, we will not disclose personal information to any 
+							third party unless we believe that disclosure is necessary: (1) to conform to legal requirements or to 
+							respond to a subpeona, search warrant or other legal process received by TringMe, whether or not a 
+							response is required by applicable law; (2) to enforce the TringMe Terms of Use Agreement or to protect 
+							our rights; or (3) to protect the safety of members of the public and users of the service. TringMe 
+							reserves the right to transfer personal information to a successor in interest that acquires rights to that 
+							information as a result of the sale of TringMe or substantially all of its assets to that successor in 
+							interest. For more information see the "Changes in Our Privacy Policy" section below. </p>
+			
+					<h3>Co-branded and Other Affiliated Sites</h3>
+						  <p> Certain information or services offered or provided through this website, from time to time, may be 
+							provided on or through other websites operated by or in conjunction with third party providers 
+							("Partners"). Although TringMe will continue to control any personally identifiable information collected
+							about you from one of these sites, such information may be shared by TringMe with that Partner in 
+							order to further facilitate the Services to which you register. However, a Partner will not rent, sell, or 
+							disclose any of your personally identifiable information to third parties unless you consent to such 
+							disclosures and use in advance (for example, you may be asked to opt-in on a particular co-branded site 
+							in order to receive information or offers from a Partner, its affiliates or agents). </p>
+			
+					<h3>TeleCommunications</h3>
+						   <p> You may use TringMe to make and receive phone calls which are partly or fully handled via our 
+						  telecommunications partners. Therefore any information which you may communicate during such 
+						  phone calls, including any personal information, shall not be deemed private. We cannot guarantee the 
+						  security of such information, that you disclose or communicate in such phone calls and you do so at your 
+						  own risk.</p>
+		  
+					<h3>Commitment to Security</h3>
+						  <p> We are committed to keeping your TringMe information private, and will use that information only for 
+							purposes of operating TringMe services and improving them. We have implemented security guidelines 
+							to help safeguard the privacy of your TringMe information from unauthorized access or improper use. 
+							We have put in place physical, electronic, and managerial procedures to safeguard and secure the 
+							information we collect and we will continue to enhance our security procedures as new technology 
+							becomes available. </p>
+			
+					<h3>Contact Us</h3>
+						  <p> If you have any questions or concerns about the TringMe Privacy Policy or its implementation, please 
+							visit the "<a href="contact.html">Contact Us</a>" page. </p>
+							
+					<h3>Changes to this Privacy Policy</h3>
+						<p>Please review this Policy periodically as TringMe may update this Privacy Policy from time to time. If 
+							there are significant changes to TringMe's information practices, you will be provided with an online 
+							notice. </p>
+						  <p> We are committed to conducting our business in accordance with these principles in order to ensure 
+							that the confidentiality of personal information is protected and maintained. </p>	
+			</div>
+			
+		</div>
+    
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer id="footer">
+		<div class="container">
+		<tringmesection cref="footer.html">
+                <div class="row" id="desktopFooter">
+
+                 <div class="col-md-2">
+			 <div class="togglef toggle-transparent-body toggle-margin-top-0">
+
+			    <div class="togglef footer active">
+					<label>About</label>
+					<div class="toggle-content">
+						<ul class="footer-links list-unstyled">
+							<li><a href="about-us.html">TringMe</a></li>
+							<li><a href="career.html">Career</a></li>
+							<li><a href="news.html">In News</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+        </div>
+        <div class="col-md-3">
+			<div class="togglef toggle-transparent-body toggle-margin-top-0">
+
+				<div class="togglef footer">
+					<label>Explore TringMe</label>
+					<div class="toggle-content">
+						<ul class="footer-links list-unstyled">
+							<li><a href="international-call-rates.html">International Call Rates</a></li>
+							<li><a href="referral-program.html">Earn Bonus Credits</a></li>
+							<li><a href="developer/overview.html">Developer</a></li>
+							<li><a href="developer/wholesale-voip.html">Wholesale VoIP</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+            
+        </div>
+        <div class="col-md-3">
+			<div class="togglef toggle-transparent-body toggle-margin-top-0">
+
+				<div class="togglef footer">
+					<label>Help</label>
+					<div class="toggle-content">
+						<ul class="footer-links list-unstyled">
+							<!-- <li><a href="how-to-use-tringme.html">How To Use</a></li> -->
+							<li><a href="faq.html">FAQ</a></li>
+							<li><a href="contact-support.html">Support</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+        </div>
+        <div class="col-md-4">
+
+            <!-- Newsletter Form -->
+            <div class="col-sm-6 padding-20 padding-left-0" style='padding-left:0px !important;padding-top: 0px !important;'>
+                <a target='_blank' href='https://play.google.com/store/apps/details?id=com.tringme.android&referrer=utm_source%3Dtringmeweb'><img src='assets/images/google-play-store.png' /></a>
+            </div>
+            <div class="col-sm-6 padding-20" style='padding-left:0px !important;padding-top: 0px !important;'>
+                <a target='_blank' href='https://itunes.apple.com/app/apple-store/id1050425742?pt=117979707&ct=tringmeweb&mt=8'><img src='assets/images/apple-store.png' /></a>
+            </div>
+            <h4 class="letter-spacing-1 col-sm-12 no-margin padding-0">Stay Connected</h4>
+
+
+
+            <!-- Social Icons -->
+            <div class="margin-top-20">
+                <a href="https://facebook.com/tringme" class="social-icon social-icon-round social-icon-border social-facebook"  data-placement="bottom" title="Facebook">
+                    <i class="icon-facebook"></i>
+                </a>
+                <a href="https://twitter.com/tringme" class="social-icon social-icon-round social-icon-border social-twitter"  data-placement="top" title="Twitter">
+                    <i class="icon-twitter"></i>
+                </a>
+                <a href="https://plus.google.com/+Tringme" class="social-icon social-icon-round social-icon-border social-gplus"  data-placement="top" title="Google+">
+                     <i class="icon-gplus"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/tringme" class="social-icon social-icon-round social-icon-border social-linkedin" data-placement="top" title="LinkedIn">
+                    <i class="icon-linkedin"></i>
+                </a>
+                <a href="#" class="social-icon social-icon-round social-icon-border social-youtube"  data-placement="top" title="Youtube">
+                    <i class="icon-youtube"></i>
+                </a>
+
+
+
+
+
+            </div>
+            <!-- /Social Icons -->
+            <div class='col-sm-12'>
+
+            </div>
+        </div>
+        <div class='col-sm-12 margin-top-30 '>
+            <p class='margin-bottom-10 size-13'><img src="assets/images/footer-no-emergency-call.png"><span>  No emergency calls with TringMe</span></p>
+            <p class='margin-bottom-10 size-13'>TringMe is not a replacement for your telephone and can't be used for emergency calling</p>
+        </div>
+       
+    </div>
+	</tringmesection>
+            	</div>
+            	<div class="copyright">
+                <div class="container">
+				<tringmesection cref="last_footer.html">
+                    <ul class="pull-right nomargin list-inline mobile-block margin-top-5">
+            <li><a href="terms-of-use.html#privacy">Privacy</a></li>
+            <li>&bull;</li>
+            <li><a href="terms-of-use.html#terms">Terms of services</a></li>
+            <li>&bull;</li>
+           <!--  <li><a href="#">Blog</a></li>
+            <li>&bull;</li> -->
+            <li><a href="sitemap.html">Sitemap</a></li>
+            <li>&bull;</li>
+            <li><a href="contact.html">Contact us</a></li>
+
+        </ul>
+        <img style='margin-right:10px;' src="assets/images/footer-logo.png" />&copy; 2016 TringMe. All rights reserved.
+					</tringmesection>
+                </div>
+            </div>
+        </footer>
+        <!-- /FOOTER -->
+
+    </div>
+    <!-- /wrapper -->
+    <!-- SCROLL TO TOP -->
+    <a href="#" id="toTop"></a>
+
+
+    <!-- PRELOADER -->
+
+    <div id="preloader">
+        <div class="inner">
+            <span class="loader"></span>
+        </div>
+    </div><!-- /PRELOADER -->
+    <!-- JAVASCRIPT FILES -->
+    <script type="text/javascript">var plugin_path = 'assets/plugins/';</script>
+    <script type="text/javascript" src="assets/plugins/jquery/jquery-2.1.4.min.js"></script>
+  
+    <script type="text/javascript" src="assets/js/scripts.js"></script>
+
+   
+    <script type="text/javascript" src="assets/plugins/slider.revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/slider.revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="assets/js/view/demo.revolution_slider.js"></script>
+    <script src="assets/js/tringme.js"></script>
+    <script src="assets/js/angucomplete-alt.js"></script>
+    <script src="assets/js/countries.js"></script>
+	
+
+</body>
+</html>

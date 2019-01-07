@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd"><html><body><div class=" col-lg-9 col-md-9 col-sm-12 col-xs-12  tm-dialpad-area clearfix" data-contactid="01"><div class="tm-content-header media-head-set clearfix"><div class="media pull-left col-lg-6 col-md-6 col-sm-9 col-xs-12"><div class="media-left profile-pic"><a href="#"><img alt="user-picture" src="{{user.imageurl}}/{{selcontact.photo}}.jpg" height="50" width="50"></a></div><div class="profile-detail"><h4>{{selcontact.name}}</h4><p>Call:<span id="defaulNumber">+{{selcontact.defnum}}</span><a href="javascript:;" class="hidden-xs" id="crate">Check Rate</a><span class="ratespan hide hidden-xs"> (Rates <span>2.20 &Acirc;&cent;/Min.</span>)</span></p><p class="visible-xs checkrate-xs"><a href="javascript:;" id="crate1">Check Rate</a><span class="ratespan hide"> (Rates <span>2.20 &Acirc;&cent;/Min.</span>)</span></p></div><div class="editdelet-cont"><div class="edit-btn"><a class="enable round-call-btn" href="#" data-target="#myModal-editprofile"><i class="tm-i-edit color-gray"></i></a><p>Edit</p></div><div class="del-btn"><a class="round-call-btn" ng-click="deleteContacts();"><i class="tm-i-numbercancel color-red"></i></a><p>Delete</p></div></div></div><div id="phoneHelper1" class="call-options custom-icon tm-alignright hidden-xs"><div class="call-icon"><a class="color-green enable" href="dashboard-callprogress.html"><i class="tm-i-call"></i></a><p class="call">Call</p></div><div class="callback-icon "><a class="bg-color-darkred" data-toggle="modal" data-target="#myModal-call-back"><i class="tm-i-callback-new"></i></a><p>Callback</p></div></div></div><div class="tm-content-body tm-contact-screen clearfix main-scroll"><div class=" col-lg-6 col-md-6 col-sm-12 col-xs-12 tab-mar-b0 tm-edit-cont clearfix"><div class="profile-list-view "><div class="col-md-6 pad-a0"><div class="title">Mobile</div><div class="phone-num first editable mobileedit" data-id="contactInputMobile" id="mobileedit" style="display: block;">+{{selcontact.mobile}}</div><input type="tel" style="display: none;" name="mobileedit" class="number mobileInput" data-id="contactInputMobile" value="+{{selcontact.mobile}}" id="cnfMobileNo"></div><div class="col-md-6 pad-a0"><div class="col-md-12 pad-a0"><div class="pull-right editdel-indi-cont mobile-device-change  numberEditPanel" id="numberedit"><a href="dashboard-callprogress.html" data-original-title="Call" title="" data-placement="top" data-toggle="tooltip" class="round-call-btn"><i class="tm-i-call"></i></a><a href="#" data-original-title="Callback" title="" data-placement="top" class="round-call-btn" data-toggle="modal" data-target="#myModal-call-back1"><i class="tm-i-callback-new"></i></a><a data-original-title="Set default Number" title="" data-placement="top" data-toggle="tooltip" class="round-call-btn bg-color-green contactDefault"><i class="tm-i-call-rightarrow color-white"></i></a><span class="first1"></span></div></div></div><div class="profile-list-view "><div class="col-md-6 pad-a0"><div class="title">Home</div><div class="phone-num first  editable mobileedit" data-id="contactInputHome" id="mySelect" style="display: block;">+{{selcontact.home}}</div><input type="text" id="mySelect" style="display:none;" data-id="contactInputHome" value="+{{selcontact.home}}" class="remove-input card-number4 mySelect1 mobileInput" placeholder="+119278422445" maxlength="18"></div><div class="col-md-6 pad-a0"><div class="col-md-12  pad-a0"><div class="pull-right editdel-indi-cont mobile-device-change  numberEditPanel" id="numberedit"><a href="dashboard-callprogress.html" data-original-title="Call" title="" data-placement="top" data-toggle="tooltip" class="round-call-btn"><i class="tm-i-call"></i></a><a href="#" data-original-title="Callback" title="" data-placement="top" class="round-call-btn" data-toggle="modal" data-target="#myModal-call-back1"><i class="tm-i-callback-new"></i></a><a data-original-title="Set default Number" title="" data-placement="top" data-toggle="tooltip" class="round-call-btn bg-color-green contactDefault"><i class="tm-i-call-rightarrow color-white"></i></a><span class="first1"><a href="javascript:;" data-original-title="edit" title="" data-placement="top" data-toggle="tooltip" class="round-call-btn contactEdit" id="editt"><i class="tm-i-edit color-gray"></i></a><a href="javascript:;" data-original-title="save" title="" data-placement="top" data-toggle="tooltip" class="round-call-btn save contactSave" id="save"><i class="tm-i-save color-gray"></i></a></span></div></div></div></div><div class="profile-list-view"><div class="col-md-6 pad-a0"><div class="title">Office</div><div class="phone-num"><div class="phone-num first editable mobileedit" data-id="contactInputOffice" id="officeSelect"></div><input type="text" style="display: none;" class="mobileInput" data-id="contactInputOffice1" ng-click="updatesContacts();" id="officeSelect1" placeholder="Add Number" maxlength="18"></div></div><div class="col-md-6 pad-a0"><div class="col-md-12  pad-a0"><div class="pull-right editdel-indi-cont mobile-device-change  numberEditPanel" id="numberedit"><a href="dashboard-callprogress.html" data-original-title="Call" title="" data-placement="top" data-toggle="tooltip" class="round-call-btn"><i class="tm-i-call"></i></a><a href="#" data-original-title="Callback" title="" data-placement="top" class="round-call-btn" data-toggle="modal" data-target="#myModal-call-back1"><i class="tm-i-callback-new"></i></a><a data-original-title="Set default Number" title="" data-placement="top" data-toggle="tooltip" class="round-call-btn bg-color-green contactDefault"><i class="tm-i-call-rightarrow color-white"></i></a><span class="first1"><a href="javascript:;" data-original-title="edit" title="" data-placement="top" data-toggle="tooltip" class="round-call-btn contactEdit" id="editt"><i class="tm-i-edit color-gray"></i></a><a href="javascript:;" data-original-title="save" title="" data-placement="top" data-toggle="tooltip" class="round-call-btn save contactSave" id="save"><i class="tm-i-save color-gray"></i></a></span></div></div></div></div><div class="profile-list-view"><h2>Schedule Callback</h2><div class="col-md-12 pad-a0"><div class="input-group formTemp tl-combobox  first" tabindex="8"><input type="text" placeholder="Select Date" class="form-control whiteBg date-calender" id="datepicker" data-date-setzindex="2010" data-provide="datepicker" data-date-format="dd MM yyyy" tabindex="-1"></div><div class="input-group formTemp tl-combobox bootstrap-timepicker " tabindex="8"><input type="text" placeholder="Select Time" class="form-control whiteBg date-calender timepicker   " tabindex="-1"></div><div class="pull-right mobile-width-100"><a href="#" data-original-title="Set Schedule Callback" title="" data-placement="top" data-toggle="tooltip" class="round-call-btn   mar-r5"><i class="tm-i-rightarrow color-green "></i></a><a href="#" data-original-title="Cancel" title="" data-placement="top" data-toggle="tooltip" class="round-call-btn "><i class="tm-i-numbercancel color-red"></i></a></div></div></div><a href="dashboard-callhistory-v1.2.html"><button class="btn btn-blue pull-right" type="button">View Call History</button></a></div><div class="col-md-6 col-sm-6 tm-txt-cntnt-block hidden-sm hidden-xs"><div class="broadcast-txt"><h4>Broadcast Your Voice Message</h4><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five</p><a href="#/dashboard/broadcastmessage"><button type="button" class="btn">Broadcast Now</button></a></div><div class="tm-app-ad"><h4>Download TringMe App</h4><div class="tm-app-img"><a href="#" class="mar-r10"><img src="img/google-play-store.png" alt="google play"></a><a href="#"><img src="img/apple-store.png" alt="apple store"></a></div></div></div></div></div><div class="modal fade" id="myModal-editprofile" tabindex="-1" role="dialog" aria-labelledby="myModal-editprofile" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h3 class="modal-title" id="gridSystemModalLabel">Edit</h3></div><div class="modal-body"><div class="profile-list-view"><div class="col-md-12 pad-a0"><div class="title">Name</div><input type="text" value="{{selcontact.name}}" class="mobileInput" data-id="contactInputName" name="nameedit" id="contactInputName"></div></div><div class="profile-list-view"><div class="col-md-12 pad-a0"><div class="title">Mobile</div><input type="text" value="+119278422445" class="mobileInput" data-id="contactInputMobile" name="mobileedit" id="contactInputMobile"></div></div><div class="profile-list-view"><div class="col-md-12 pad-a0"><div class="title">Home</div><input type="text" value="+119278422" class="mobileInput" data-id="contactInputHome" name="mobileedit" id="contactInputHome"></div></div><div class="profile-list-view"><div class="col-md-12 pad-a0"><div class="title">Office</div><input type="text" value="" class="mobileInput" data-id="contactInputOffice" name="mobileedit" id="contactInputOffice"></div></div></div><div class="modal-footer"><a href="#" ng-click="updatesContacts();" data-dismiss="modal" aria-label="Close" class="btn btn-blue"><i class="tm-i-save mar-r10"></i>Save</a><a href="#" data-dismiss="modal" aria-label="Close" class="btn btn-red">Cancel</a></div></div></div></div><div class="modal fade" id="myModal-call-back1" tabindex="-1" role="dialog" aria-labelledby="myModal-call-back" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h3 class="modal-title" id="gridSystemModalLabel">Modal title</h3></div><div class="modal-body"></div><div class="modal-footer"><a href="dashboard-callprogress.html" class="btn btn-blue"><i class="tm-i-callback-new mar-r10"></i>Call back</a><a href="#" data-dismiss="modal" aria-label="Close" class="btn btn-red">Cancel</a></div></div></div></div><div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header clearfix"><button type="button" class="close" data-dismiss="modal" aria-label="Close">Close<span aria-hidden="true">&times;</span></button></div><div class="modal-body"><div class="col-md-3 tm-contacts"><div class="tm-contacts-title clearfix"><h4 class="tm-alignleft">Contacts</h4><div class="contacts-icons tm-alignright"><div class="dropdown"><a href="#" data-toggle="dropdown"><i class="tm-i-addcontact"></i></a><div class="dropdown-menu tm-user-cntct-dropdown"><input type="text" id="name1" placeholder="Name"><input type="text" id="number1" placeholder="Number"><button type="button" id="add1" class="btn">Add Contact</button></div></div><div class="dropdown"><a href="#" data-toggle="dropdown"><i class="tm-i-searchcontact"></i></a><div class="dropdown-menu tm-user-cntct-dropdown srch-dd"><input class="search" placeholder="Search"></div></div><a href="#"><i class="tm-i-refreshcontact"></i></a></div></div></div></div></div></div></div><style>
+  .setDefault{
+    background: white;
+  }
+  .setDefault i{
+    color: grey;
+  }
+</style><script type="text/javascript">
+  $('#myModal').on('shown.bs.modal', function () {
+    $('#myInput').focus()
+  });
+  /*$('.tm-credit-txt').currency({
+// The 3 digit ISO code you want to display your currency in
+            region: "USD",
+
+  // Thousands separator
+  thousands: ",",
+
+  // Decimal separator
+  decimal: ".",
+
+  // How many decimals to show
+  decimals: 2,
+
+  // Hide any prefix
+  hidePrefix: false,
+  // Hide any postfix
+  hidePostfix: false,
+
+  // If converting, the 3 digit ISO code you want to convert from,
+  convertFrom: "",
+
+  // Loading message appended to values while converting
+  convertLoading: "(Converting...)",
+
+  // Location of convert.php file
+  convertLocation: "convert.php"
+
+  });*/
+
+  //Todo: edit code here
+
+  $('.save').hide();
+  $('.numberEditPanel').on('click','.contactEdit',function() {
+    console.log(this);
+    $(this).hide()
+            .parent()
+            .find('.contactSave')
+            .show()
+            .end()
+            .closest('.profile-list-view')
+            .find('div.mobileedit').hide()
+            .next().show();
+
+  }).on('click','.contactSave',function() {
+    var mainContent=$(this).closest('.profile-list-view');
+    var input=mainContent.find('.mobileInput');
+    $('[data-id="'+input.data('id')+'"]').val(input.val());
+    console.log(input);
+    $(this).hide()
+            .parent().siblings().show().end()
+            .find('.contactEdit').show()
+            .end()
+            .closest('.profile-list-view')
+            .find('div.mobileedit').show()
+            .next().hide();
+    if(mainContent.find('.setDefault').length){
+      var newDefault=mainContent.find('div.mobileedit').html();
+      dedfaultNumber.html(newDefault);
+
+
+    }
+
+    console.log(input.val());
+    if(input.val().length){
+      mainContent
+
+              .find('.numberEditPanel').children().show().end();
+
+
+    }else{
+
+      mainContent
+              .find('.numberEditPanel').children().hide().end().find('.first1').show();
+
+    }
+
+
+  }).on('click','.contactDefault',function() {
+    console.log(this);
+    dedfaultNumber.html($(this).closest('.profile-list-view').find('.mobileedit').html());
+    $(this).addClass('setDefault').tooltip('disable');
+    $(this).closest('.profile-list-view').siblings().each(function(){
+      $(this).find('.setDefault').removeClass('setDefault').tooltip('enable');
+    });
+
+
+  });
+  //defaulNumber
+  var dedfaultNumber=$('#defaulNumber');
+  (function(){
+
+    $('.mobileedit').each(function(){
+      var targetContainer=$(this);
+      var target=targetContainer.closest('.profile-list-view');
+      //console.log(data);
+      if(!targetContainer.html().length){
+
+        targetContainer.closest('.profile-list-view')
+                .find('div.mobileedit').hide()
+                .next().show().end().end()
+                .find('.numberEditPanel').children().hide().end()
+                .find('.contactSave').show().prev().hide().parent().show();
+      }else{
+        //console.log(target.find('.contactDefault').html());
+        if(targetContainer.html()==dedfaultNumber.html()){
+          console.log('infunction');
+          target.find('.contactDefault').addClass('setDefault').tooltip('disable').end().end().find('.contactDelete').hide();
+        }
+      }
+    });
+    $('.mobileInput').on('keyup',function(){
+      if($(this).prev().hasClass('mobileedit')){
+        $(this).prev().html($(this).val());
+
+      }
+
+    })
+  })();
+  function contactSave(){
+    console.log(this);
+    $('#myModal-editprofile').find('.mobileInput').each(function(){
+
+      $('.profile-list-view').find('[data-id="'+$(this).data('id')+'"]').val($(this).val()).html($(this).val());
+      $('[data-id="'+$(this).data('id')+'"]').each(function(){
+        console.log(this);
+        var mainContent=$(this).closest('.profile-list-view');
+        if(mainContent.find('.setDefault').length){
+          var newDefault=mainContent.find('div.mobileedit').html();
+          dedfaultNumber.html(newDefault);
+
+
+        }
+        if($(this).val().length){
+          mainContent
+
+                  .find('.numberEditPanel').children().show().end();
+
+
+        }else{
+
+          mainContent
+                  .find('.numberEditPanel').children().hide().end().find('.first1').show();
+          mainContent.find('.contactEdit').click();
+
+        }
+
+      })
+    });
+
+  }
+
+  $('#myModal').on('shown.bs.modal', function () {
+    $('#myInput').focus()
+  });
+
+
+
+
+
+
+
+</script><script type="application/javascript">
+
+            $(document).ready(function () {
+$('head').load('Head.html');
+            });
+
+
+</script><script>
+  $('.maskInputNumber').mask('+000000000000000000');
+</script></div></body></html>

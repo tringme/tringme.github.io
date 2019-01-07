@@ -1,0 +1,689 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]>			<html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>			<html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8" />
+    <title>Rest API Overview | TringMe</title>
+    <meta name="keywords" content="rest api, TringMe, rest api request" />
+    <meta name="description" content="TringMe rest api calls are made over the internet by sending HTTP GET or POST requests to our server." />
+    <meta name="Author" content="https://tringme.com" />
+
+    <!-- mobile settings -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <!-- WEB FONTS : use %7C instead of | (pipe) -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+
+    <!-- CORE CSS -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+
+    <!-- THEME CSS -->
+    <link href="../assets/css/essentials.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+    <!-- PAGE LEVEL SCRIPTS -->
+    <link href="../assets/css/header-1.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/color_scheme/red.css" rel="stylesheet" type="text/css" id="color_scheme" />
+
+    <!-- REVOLUTION SLIDER -->
+    <link href="../assets/plugins/slider.revolution/css/extralayers.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/slider.revolution/css/settings.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="https://api.tringme.com/tringmewebapi.js"></script>
+    <link href="../assets/css/angucomplete-alt.css" rel="stylesheet">
+	
+	<!-- FEVICON -->
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="../apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="../apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="../favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="../favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="../favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="../favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="../favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="TringMe"/>
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="../mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="../mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="../mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="../mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="../mstile-310x310.png" />
+	
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','analytics');
+
+		analytics('create', 'UA-74062941-1', 'auto');
+		analytics('send', 'pageview');
+	</script>
+
+</head>
+
+<body ng-app="app" class="smoothscroll enable-animation">
+    <!-- wrapper -->
+    <div id="wrapper" ng-controller="MainController">
+
+        <div id="header" class="sticky clearfix">
+
+            <!-- TOP NAV -->
+		<tringmesection cref="header.html">
+            <header id="topNav">
+                <div class="container">
+
+                    <!-- Mobile Menu Button -->
+                    <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Logo -->
+                    <a class="logo pull-left" href="../index.html">
+                        <img src="../assets/images/tringme-logo.png" alt="tringme logo" /> <!-- light logo -->
+                        <!-- <img src="assets/images/logo_dark.png" alt="" /> --> <!-- dark logo -->
+                    </a>
+		    
+                    <div class="navbar-collapse pull-right nav-main-collapse collapse submenu-dark">
+                        <nav class="nav-main">
+                            <ul id="topMain" class="nav nav-pills nav-main">
+                                <li class="dropdown">
+                                    <a href="../index.html">
+                                        Home
+                                    </a>
+
+                                </li>
+                               
+                                <li class="dropdown">
+                                    <a href="../international-call-rates.html">
+                                        Rates
+                                    </a>
+                                   
+                                </li>
+                                <li class="dropdown">
+                                    <a href="../developer/overview.html">
+                                        Developer
+                                    </a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="../help.html">
+                                       
+                                        Help
+                                    </a>
+                                </li>
+
+                                <li class="dropdown ">
+                                    <a href="/login" class="hidden-lg hidden-md">
+                                        {{logintext}}
+                                    </a>
+                                    <a href="/login" class="hidden-xs hidden-sm">
+                                        <span class='btn login'>
+                                            {{logintext}}
+                                        </span>
+                                    </a>
+                                </li>
+                            
+
+                            </ul>
+
+                        </nav>
+                    </div>
+		    
+
+                </div>
+            </header>
+		</tringmesection>
+            <!-- /Top Nav -->
+
+        </div>
+        <section class="page-header">
+            <div class="container">
+
+                <h1>Rest API</h1>
+
+                <!-- breadcrumbs -->
+                <ol class="breadcrumb visible-lg visible-md">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="overview.html">Developer</a></li>
+                    <li><a href="#">Rest API</a></li>
+
+                </ol><!-- /breadcrumbs -->
+
+            </div>
+        </section>
+        <!-- /PAGE HEADER -->
+
+
+        <section class='padding-xs'>
+           
+            <div class="container">
+                <div class='row'>
+                    <div class='col-sm-3'>
+                        <!-- CATEGORIES -->
+                        <div class="side-nav margin-bottom-60">
+                            <div class="side-nav-head">
+                                <button class="fa fa-bars"></button>
+								 <h4>Topics</h4>
+                            </div>
+                            <ul class="list-group list-group-bordered list-group-noicon uppercase">
+                                
+                                <li class="list-group-item active">
+                                    <a  href="restapi.html">Rest API</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="usermanagementapi.html">Account Management</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="callconfsmsapi.html">Calls, Conferencing & SMS</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="destinations.html">Destinations</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="channelapi.html">Channels</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="sipanddid.html">SIP & Inward Dialing</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="billingchargingcdrapi.html">Billing Charging & CDR</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="realtimenotificationsapi.html">Notifications</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <!-- /CATEGORIES -->
+                    </div>
+                    <div class='col-sm-9'>
+                      
+                        <div class="col-sm-12">
+                            <h3 id="JavaAPI">REST API Overview</h3>
+                            <p>TringMe REST API calls are made over the internet by sending HTTP GET or POST requests to our server. For example, to get the TringMe user id, following URL should be constructed:</p>
+                            <table class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Sample Request URL</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <code>
+                                                http://api.tringme.com/api.php?apikey=12sdas8dadadsadajs3&amp;<br>
+                                                sig=4b61af9cd869706edc6a4569fc4e7b33 &amp;op=getuid&amp;<br>
+                                                email=api@anexample.com
+                                            </code>
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <p>You will require API keys in order to use TringMe REST API. To obtain API keys, login and go to <strong>Settings</strong> page. In the <strong>Developer Settings</strong> section you can request for you API keys. API keys are available in a pair, public and private keys.</p>
+                            <p>
+                                To access the TringMe API, you should pass your public API key, operation code and signature of the request to the TringMe’s API server. Depending on requested operation, you will also need to pass one or more required parameters. All API request must include checksum signature using private key to avoid any tampering of the request. Note that, you MUST NOT include your private key for any transaction.
+                            </p>
+                            <hr />
+                            <h3>Basic Concepts</h3>
+                            <p>Telephony and Messaging is not new to us; we use it every day in our life. Infact it has become an integral part of our day-to-day communication Whether it is just a phone call, a conference we attend, interact with an automated bank assistant via IVR, voice chat with our buddy half-way around the world via instant messenger or just send an SMS, it is clear that communication has only increased and the types of devices we use to interact have grown as well.</p>
+                            <p>Hence, with evolving trends, we are not restricted to phone to converse anymore. One could be using phone to call another user on phone or SIP or say Gtalk and vice versa. Apart from the peer to peer calls, we often dial to automated voice response system (say phone banking) or multi-party destination (say conference). This gives a plenty of combinations how one calls and how one receives the call.</p>
+                            <p>TringMe’s APIs allows you to communicate with all of the above mentioned source an destination types. Before we get deeper into this, let’s define some terminology which will be used throughout this document. Source: Who is initiating call and how. Source could be placing the call from phone, Flash widget or Flash phone, SIP, Instant Messenger, or a mobile device using VoIP. Destination: This identifies to whom the call is initiated to. It can be an individual, a multi-party conferencing or an IVR (VoicePHP) application. The individuals can receive the call on wide range of devices that TringMe’s unified communication platform offers and supports - Phone, Instant Messenger (Gtalk, Skype), SIP, etc. Take a look at the “Supported Destination” section below to understand the specifics of how various types of destination can be specified.</p>
+                            <p>As you go through the document, it will become clear as to how various combinations of source and destination can be used by your application. However to give you a quick glimpse of how simple to use source & destination, invoking following URL will place call between two phone numbers 18585551234 & 15015551234:</p>
+                            <table class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Sample Request URL</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <code>
+                                                http://api.tringme.com/api.php?apikey=12sdas8dadadsadajs3&amp;<br>
+                                                sig=4b61af9cd869706edc6a4569fc4e7b33 &amp;op=call&amp;src=18585551234 
+                                                &amp;dest=15015551234
+                                            </code>
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                            <p>Simple isn’t? In later sections, we will show more powerful examples like how to play greetings, defining destinations for recurring use (channels), scheduling calls and conferences etc.</p>
+
+                            <hr />
+                            <h3>Invoking REST API</h3>
+                            <p>Following sections describe the mandatory API parameters which should be a part of every API request that is sent by the client:</p>
+                            <table class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Parameter Description</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            apikey
+                                        </td>
+                                        <td>
+                                            <strong>Public API Key</strong>, this is used to identify the invoker for an API operation. To obtain API keys, login and go to <strong>Settings page</strong>. In the <strong>Developer Settings</strong> section you can request for you API keys
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            op
+                                        </td>
+                                        <td>
+                                            <strong>Operation</strong> to be performed. The addition parameters needed for the successful execution of a specific operation is as specified in the documentation.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            sig
+                                        </td>
+                                        <td>
+                                            <strong>Signature</strong> is used to ensure that the API request coming to TringMe is actually coming from you. It is generated by concatenating all the parameters needed for an operation with keys in sorted order as = , private key and taking md5 of it.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            debug[optional]
+                                        </td>
+                                        <td>
+                                            <strong>Signature</strong> is used to ensure that the API request coming to TringMe is actually coming from you. It is generated by concatenating all the parameters needed for an operation with keys in sorted order as = , private key and taking md5 of it.
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <p>In any API operation, if cookie is omitted, the operation will be performed from API user’s account.</p>
+                            <p>Some APIs take duration as a parameter. Although we strive hard to ensure that duration as specified is honored, it may vary by a few seconds as call-setup and disconnection involves signaling.</p>
+
+                            <hr />
+                            <h3>API Return Value</h3>
+                            <p>Unless otherwise specified, all the APIs return following:</p>
+
+                            <p>If successful, it will return ‘OK’ or ‘OK ’.</p>
+
+                            <p>On failure, it will return ‘FAIL ’. For explanation of reason code, please refer to the API Results section below.</p>
+
+                            <p>TringMe API only allows clients to make a limited number of calls in a given hour. For most usages, our limits are sufficient. It is best practice for applications to use local database and invoke TringMe API only when needed. TringMe dynamically throttles API requests if necessary, especially when invoked without real usage or calls.</p>
+
+                            <p>API response is indicated by OK or FAIL condition. Success will be indicated by following output:</p>
+
+                            <p>OK [<value>]</p>
+
+                            <p>‘value’ will be operation specific and optional. Please refer to the specific API for how to interpret the value.</p>
+
+                            <p>Failure will be indicated by one of the values tabulated below:</p>
+                            <table class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Parameter Description</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            FAIL
+                                        </td>
+                                        <td>
+                                            Operation Failed (however API key, signature etc were okay)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            NOKEY
+                                        </td>
+                                        <td>
+                                            Missing Key
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            NOSIG
+                                        </td>
+                                        <td>
+                                            Missing Signature
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            NOOP
+                                        </td>
+                                        <td>
+                                            Missing Operation
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            BADSIG
+                                        </td>
+                                        <td>
+                                            Bad Signature
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            INVALIDKEY
+                                        </td>
+                                        <td>
+                                            Invalid API Key
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            INSUFFICIENTCREDITS
+                                        </td>
+                                        <td>
+                                            Insufficient Credits
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            BADDEST
+                                        </td>
+                                        <td>
+                                            Destination is invalid
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            MISSINGPARA
+                                        </td>
+                                        <td>
+                                            Missing parameters
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            USEREXIST
+                                        </td>
+                                        <td>
+                                            User already exists
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            AUTHFAIL
+                                        </td>
+                                        <td>
+                                            Authorization Fail or Session Expired/Invalid cookie (get new cookie)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            NOTLOGGEDIN
+                                        </td>
+                                        <td>
+                                            Login Required
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            BADDURATION
+                                        </td>
+                                        <td>
+                                            Duration value is out of limit. Ensure that you are using the right unit (minute vs. second)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            BADCHANNEL
+                                        </td>
+                                        <td>
+                                            Channel does not exist OR not owned by API holder
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            TOOMANYCHANNELS
+                                        </td>
+                                        <td>
+                                            Channel quota exceeded
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            TOOMANYCONFS
+                                        </td>
+                                        <td>
+                                            Number of conference you can schedule is exceeded
+                                        </td>
+                                    </tr>
+
+
+                                </tbody>
+
+                            </table>
+                            <hr />
+                            <h3>API Usage</h3>
+                            <p>In this section, you will find common techniques to use APIs for specific purpose. Given the capability of the API, there are several different ways to use them to your benefit or application requirement. Our intent here is to give you basic building blocks which can then enable you to use them for more complex requirements as needed.</p>
+                            <strong>Placing a call</strong>
+
+                            <p>Setting up a call is quick and easy. Here are the steps to follow:</p>
+                            <ul class="list-unstyled">
+                                <li class="margin-bottom-10">1. Use ‘call’ API to place a call. You need to specify ‘src’ and either ‘dest’ or a ‘greeting’. You can specify optional parameters like duration and when to control scheduling aspects of the call. If successful, your call will be placed.</li>
+                                <li class="margin-bottom-10 ">2. if the ‘when’ parameter is specified, it will return a if successful.</li>
+                            </ul>
+                            <strong>Create a Conference</strong>
+                            <p>Setting up a conference is quick and easy. Here are the steps to follow:</p>
+                            <ul class="list-unstyled ">
+                                <li class="margin-bottom-10">1. Use ‘createconference’ API to create a conference. You can specify optional parameters like duration and when to control scheduling aspects of the conference. If successful, it will return a <conf-id>.</li>
+                                <li class="margin-bottom-10 ">2. Once the is available, conference can be invoked in multiple ways:</li>
+                            </ul>
+                            <ul class="list-unstyled grey-background">
+                                <li class="margin-bottom-10"><i class="fa fa-check"></i>Using conf: : as a ‘dest’ parameter in ‘call’ API. The ‘src’ parameter can contain the phone numbers of the users as a comma separated list.</li>
+                                <li class="margin-bottom-10 "><i class="fa fa-check"></i>Creating a channel and specify conf: : in the ‘dest’.</li>
+                                <li class="margin-bottom-10 "><i class="fa fa-check"></i>Use that channel created in step above (b) to invoke calls from Flash, ‘call’ API</li>
+                                <li class="margin-bottom-10 "><i class="fa fa-check"></i>Use SIP client and invoke sip: @sip.tringme.com to join the conference.</li>
+                            </ul>
+                            <p>If you are not using PHP and like to use TringMe API, you need to generate signature and API URL and use appropriate library (e.g. libcurl) to invoke the API using URL. In above code, all mentioned functionalities are handled by function <strong>TringMeAPI</strong>.</p>
+                            <p>Below is description of how you can generate signature and API URL manually.</p>
+                            <hr />
+                            <h3>Support</h3>
+                            <p>If you have any questions or have encountered a bug, please visit our support pages</p>
+
+                            <p>If you have specific requirements which cannot be met using these APIs, contact us with your requirement details and we will get back to you.</p>
+
+                            <p>Use of TringMe API is subject to TringMe TOS.</p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+
+            </div>
+        </section>
+        <!-- / -->
+        <!-- /ContactSupport -->
+        <div class="callout alert alert-transparent noborder noradius nomargin paddding-60" style=' background-color: #f9fafc;'>
+            <div class="text-center">
+
+                <p class='size-18'>If you are an enterprise and would like to know better how TringMe can help you reduce cost and at the same time benefit you, <br />please send a mail to <a href="mailto:bizdev@tringme.com" class="redh1-a">bizdev@tringme.com</a></p>
+
+            </div>
+        </div>
+        <!-- /ContactSupport -->
+        <!-- FOOTER -->
+        <footer id="footer">
+		<div class="container">
+		<tringmesection cref="footer.html">
+                <div class="row" id="desktopFooter">
+
+                 <div class="col-md-2">
+			 <div class="togglef toggle-transparent-body toggle-margin-top-0">
+
+			    <div class="togglef footer active">
+					<label>About</label>
+					<div class="toggle-content">
+						<ul class="footer-links list-unstyled">
+							<li><a href="../about-us.html">TringMe</a></li>
+							<li><a href="../career.html">Career</a></li>
+							<li><a href="../news.html">In News</a></li>
+							<li><a href="../contact.html">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+        </div>
+        <div class="col-md-3">
+			<div class="togglef toggle-transparent-body toggle-margin-top-0">
+
+				<div class="togglef footer">
+					<label>Explore TringMe</label>
+					<div class="toggle-content">
+						<ul class="footer-links list-unstyled">
+							<li><a href="../international-call-rates.html">International Call Rates</a></li>
+							<li><a href="../referral-program.html">Earn Bonus Credits</a></li>
+							<li><a href="../developer/overview.html">Developer</a></li>
+							<li><a href="../developer/wholesale-voip.html">Wholesale VoIP</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+            
+        </div>
+        <div class="col-md-3">
+			<div class="togglef toggle-transparent-body toggle-margin-top-0">
+
+				<div class="togglef footer">
+					<label>Help</label>
+					<div class="toggle-content">
+						<ul class="footer-links list-unstyled">
+							<!-- <li><a href="../how-to-use-tringme.html">How To Use</a></li> -->
+							<li><a href="../faq.html">FAQ</a></li>
+							<li><a href="../contact-support.html">Support</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+        </div>
+        <div class="col-md-4">
+
+            <!-- Newsletter Form -->
+            <div class="col-sm-6 padding-20 padding-left-0" style='padding-left:0px !important;padding-top: 0px !important;'>
+                <a target='_blank' href='https://play.google.com/store/apps/details?id=com.tringme.android&referrer=utm_source%3Dtringmeweb'><img src='../assets/images/google-play-store.png' /></a>
+            </div>
+            <div class="col-sm-6 padding-20" style='padding-left:0px !important;padding-top: 0px !important;'>
+                <a target='_blank' href='https://itunes.apple.com/app/apple-store/id1050425742?pt=117979707&ct=tringmeweb&mt=8'><img src='../assets/images/apple-store.png' /></a>
+            </div>
+            <h4 class="letter-spacing-1 col-sm-12 no-margin padding-0">Stay Connected</h4>
+
+
+
+            <!-- Social Icons -->
+            <div class="margin-top-20">
+                <a href="https://facebook.com/tringme" class="social-icon social-icon-round social-icon-border social-facebook"  data-placement="bottom" title="Facebook">
+                    <i class="icon-facebook"></i>
+                </a>
+                <a href="https://twitter.com/tringme" class="social-icon social-icon-round social-icon-border social-twitter"  data-placement="top" title="Twitter">
+                    <i class="icon-twitter"></i>
+                </a>
+                <a href="https://plus.google.com/+Tringme" class="social-icon social-icon-round social-icon-border social-gplus"  data-placement="top" title="Google+">
+                     <i class="icon-gplus"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/tringme" class="social-icon social-icon-round social-icon-border social-linkedin" data-placement="top" title="LinkedIn">
+                    <i class="icon-linkedin"></i>
+                </a>
+                <a href="#" class="social-icon social-icon-round social-icon-border social-youtube"  data-placement="top" title="Youtube">
+                    <i class="icon-youtube"></i>
+                </a>
+
+
+
+
+
+            </div>
+            <!-- /Social Icons -->
+            <div class='col-sm-12'>
+
+            </div>
+        </div>
+        <div class='col-sm-12 margin-top-30 '>
+            <p class='margin-bottom-10 size-13'><img src="../assets/images/footer-no-emergency-call.png"><span>  No emergency calls with TringMe</span></p>
+            <p class='margin-bottom-10 size-13'>TringMe is not a replacement for your telephone and can't be used for emergency calling</p>
+        </div>
+       
+    </div>
+	</tringmesection>
+            	</div>
+            	<div class="copyright">
+                <div class="container">
+				<tringmesection cref="last_footer.html">
+                    <ul class="pull-right nomargin list-inline mobile-block margin-top-5">
+            <li><a href="../terms-of-use.html#privacy">Privacy</a></li>
+            <li>&bull;</li>
+            <li><a href="../terms-of-use.html#terms">Terms of services</a></li>
+            <li>&bull;</li>
+           <!--  <li><a href="#">Blog</a></li>
+            <li>&bull;</li> -->
+            <li><a href="../sitemap.html">Sitemap</a></li>
+            <li>&bull;</li>
+            <li><a href="../contact.html">Contact us</a></li>
+
+        </ul>
+        <img style='margin-right:10px;' src="../assets/images/footer-logo.png" />&copy; 2016 TringMe. All rights reserved.
+					</tringmesection>
+                </div>
+            </div>
+        </footer>
+        <!-- /FOOTER -->
+
+    </div>
+    <!-- /wrapper -->
+    <!-- SCROLL TO TOP -->
+    <a href="#" id="toTop"></a>
+
+
+    <!-- PRELOADER -->
+
+    <div id="preloader">
+        <div class="inner">
+            <span class="loader"></span>
+        </div>
+    </div><!-- /PRELOADER -->
+    <!-- JAVASCRIPT FILES -->
+    <script type="text/javascript">var plugin_path = '../assets/plugins/';</script>
+    <script type="text/javascript" src="../assets/plugins/jquery/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="../assets/js/scripts.js"></script>
+    <!-- REVOLUTION SLIDER -->
+    <script type="text/javascript" src="../assets/plugins/slider.revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="../assets/plugins/slider.revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="../assets/js/view/demo.revolution_slider.js"></script>
+    <script src="../assets/js/tringme.js"></script>
+    <script src="../assets/js/angucomplete-alt.js"></script>
+    <script src="../assets/js/countries.js"></script>
+	
+
+</body>
+</html>

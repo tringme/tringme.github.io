@@ -1,0 +1,17 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd"><html><body><section class="tm-main-section container"><div class="tm-box"><div class="tm-red-block "><div class="col-md-12 tm-user-header-links "><ul class="clearfix panel-custom"><li class="no-hover-bg"><span class="tm-credit-txt">Enter Verification Code</span></li></ul></div></div><div class="tm-content-block"><div class="col-md-12 tm-dialpad-area radius clearfix min-ht488"><div class="col-sm-2 visible-lg"></div><div class="col-sm-12 col-lg-8 mar-t50 mar-b15 mar-top-49px"><div class="height-same-2pages"><p class="align-center">&nbsp;</p><p class="align-center">{{message}}</p></div><div class="verification-text pad-20 form-display mar-tb13"><div class="col-sm-8 mar-t20"><div class="validation-form1"><input type="text" placeholder="Enter verification code" ng-model="register.code" id="svc" class="form-control  input-background " maxlength="18" autofocus=""></div></div><div class="col-sm-4 mar-t20 mar-b30"><div class="btn-verification mar-lro"><a href="#"><button class="btn btn-lg btn-red btn-block" ng-click="verifycode();" type="button" id="svcode" disabled>VERIFY </button></a><a href="#verifyphone" class="hover-unrline"><i>Start verification again.</i></a></div></div></div><p class="color-blue tm-verifyfont">Not Received Verification Code?</p><div class="verify-hr"><hr></div><div class="row"><div class="verification-ul"><ul><li>It may take a few minutes before you receive verification SMS or call.</li><li>Restart verification if you don't receive verification within 15 minutes</li></ul></div></div></div><div class="col-sm-2 visible-lg"></div></div></div></div></section><script>
+(function() {
+    $('#svc').keyup(function() {
+        var empty = false;
+        $('#svc').each(function() {
+            if ($(this).val() == '') {
+                empty = true;
+            }
+        });
+        if (empty) {
+            $('#svcode').attr('disabled', 'disabled');
+        } else {
+            $('#svcode').removeAttr('disabled');
+        }
+    });
+})()
+</script></body></html>

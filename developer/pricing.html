@@ -1,0 +1,421 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]>			<html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>			<html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8" />
+    <title>Developer Pricing | TringMe</title>
+    <meta name="keywords" content="TringMe api pricing" />
+    <meta name="description" content="TringMe APIs are available for FREE to the developer community to integrate in all kinds of applications" />
+    <meta name="Author" content="https://tringme.com" />
+
+    <!-- mobile settings -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <!-- WEB FONTS : use %7C instead of | (pipe) -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+
+    <!-- CORE CSS -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+
+    <!-- THEME CSS -->
+    <link href="../assets/css/essentials.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+    <!-- PAGE LEVEL SCRIPTS -->
+    <link href="../assets/css/header-1.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/color_scheme/red.css" rel="stylesheet" type="text/css" id="color_scheme" />
+
+    <!-- REVOLUTION SLIDER -->
+    <link href="../assets/plugins/slider.revolution/css/extralayers.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/slider.revolution/css/settings.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="https://api.tringme.com/tringmewebapi.js"></script>
+    <link href="../assets/css/angucomplete-alt.css" rel="stylesheet">
+	
+	<!-- FEVICON -->
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="../apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="../apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="../favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="../favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="../favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="../favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="../favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="TringMe"/>
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="../mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="../mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="../mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="../mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="../mstile-310x310.png" />
+	
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','analytics');
+
+		analytics('create', 'UA-74062941-1', 'auto');
+		analytics('send', 'pageview');
+	</script>
+
+	
+</head>
+
+<body ng-app="app" class="smoothscroll enable-animation">
+    <!-- wrapper -->
+    <div id="wrapper" ng-controller="MainController">
+        <div id="header" class="sticky clearfix">
+
+            <!-- TOP NAV -->
+		<tringmesection cref="header.html">
+            <header id="topNav">
+                <div class="container">
+
+                    <!-- Mobile Menu Button -->
+                    <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Logo -->
+                    <a class="logo pull-left" href="../index.html">
+                        <img src="../assets/images/tringme-logo.png" alt="tringme logo" /> <!-- light logo -->
+                        <!-- <img src="assets/images/logo_dark.png" alt="" /> --> <!-- dark logo -->
+                    </a>
+		    
+                    <div class="navbar-collapse pull-right nav-main-collapse collapse submenu-dark">
+                        <nav class="nav-main">
+                            <ul id="topMain" class="nav nav-pills nav-main">
+                                <li class="dropdown">
+                                    <a href="../index.html">
+                                        Home
+                                    </a>
+
+                                </li>
+                               
+                                <li class="dropdown">
+                                    <a href="../international-call-rates.html">
+                                        Rates
+                                    </a>
+                                   
+                                </li>
+                                <li class="dropdown">
+                                    <a href="../developer/overview.html">
+                                        Developer
+                                    </a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="../help.html">
+                                       
+                                        Help
+                                    </a>
+                                </li>
+
+                                <li class="dropdown ">
+                                    <a href="/login" class="hidden-lg hidden-md">
+                                        {{logintext}}
+                                    </a>
+                                    <a href="/login" class="hidden-xs hidden-sm">
+                                        <span class='btn login'>
+                                            {{logintext}}
+                                        </span>
+                                    </a>
+                                </li>
+                            
+
+                            </ul>
+
+                        </nav>
+                    </div>
+		    
+
+                </div>
+            </header>
+		</tringmesection>
+            <!-- /Top Nav -->
+
+        </div>
+        <section class="page-header">
+            <div class="container">
+
+                <h1>Pricing</h1>
+
+                <!-- breadcrumbs -->
+                <ol class="breadcrumb visible-lg visible-md">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="overview.html">Developer</a></li>
+                    <li><a href="#">Pricing</a></li>
+
+                </ol><!-- /breadcrumbs -->
+
+            </div>
+        </section>
+        <!-- /PAGE HEADER -->
+
+
+        <section class='padding-xs'>
+            
+            <div class="container">
+                <div class='row'>
+                    <div class='col-sm-3'>
+                        <!-- CATEGORIES -->
+                        <div class="side-nav margin-bottom-60">
+                            <div class="side-nav-head">
+                                <button class="fa fa-bars"></button>
+                                <h4>TOPICS</h4>
+                            </div>
+                            <ul class="list-group list-group-bordered list-group-noicon uppercase">
+                                <li class="list-group-item ">
+                                    <a href="overview.html"><span><i class='fa fa-search-plus margin-right-10 margin-top-5 faq-icon'></i></span>Overview</a>
+                                </li>
+                                <li class="list-group-item ">
+                                    <a href="basics.html"><span><i class='fa fa-gears margin-right-10 margin-top-5 faq-icon '></i></span>Basics</a>
+                                </li>
+                                <li class="list-group-item ">
+                                    <a href="telephony.html"><span><i class='fa fa-phone margin-right-10 margin-top-5 faq-icon'></i></span>Telephony</a>
+                                </li>
+                                <li class="list-group-item ">
+                                    <a href="messaging.html"><span><i class='fa fa-comments margin-right-10 margin-top-5 faq-icon'></i></span>Messaging</a>
+                                </li>
+                                <li class="list-group-item ">
+                                    <a href="conference.html"><span><i class='fa fa-users margin-right-10 margin-top-5 faq-icon'></i></span>Conference</a>
+                                </li>
+                                <li class="list-group-item ">
+                                    <a href="realtimemonitoring.html"><span><i class='fa fa-bell margin-right-10 margin-top-5 faq-icon'></i></span>Notifications</a>
+                                </li>
+                                <li class="list-group-item ">
+                                    <a href="#" class='dropdown-toggle'><span><i class='fa fa-list-alt margin-right-10 margin-top-5 faq-icon'></i></span>API Documentation</a>
+                                    <ul>
+                                        <li><a href="restapi.html"><span><i class='fa fa-gears margin-right-10 margin-top-5 faq-icon'></i></span>Rest API</a></li>
+                                        <li><a href="flashapi.html"><span><i class='fa fa-gears margin-right-10 margin-top-5 faq-icon'></i></span>Flash API</a></li>
+                                        <li><a href="javascriptapi.html"><span><i class='fa fa-gears margin-right-10 margin-top-5 faq-icon'></i></span>Javascript API</a></li>
+                                    </ul>
+                                </li>
+                                <li class="list-group-item ">
+                                    <a href="wholesale-voip.html"><span><i class='glyphicon glyphicon-phone-alt margin-right-10 margin-top-5 faq-icon'></i></span>Wholesale A-Z SIP</a>
+                                </li>
+                                <li class="list-group-item active">
+                                    <a href="pricing.html"><span><i class='fa fa-dollar margin-right-10 margin-top-5 faq-icon'></i></span>Pricing</a>
+                                </li>
+                               <li class="list-group-item ">
+                                    <a href="#" class='dropdown-toggle'><span><i class='fa fa-file margin-right-10 margin-top-5 faq-icon'></i></span>Samples & Demos</a>
+									<ul>
+                                        <li><a href="phpsamples.html"><span><i class='fa fa-gears margin-right-10 margin-top-5 faq-icon'></i></span>PHP Sample</a></li>
+                                        <li><a href="flashsamples.html"><span><i class='fa fa-gears margin-right-10 margin-top-5 faq-icon'></i></span>Flash API</a></li>
+                                    </ul>
+                                </li>
+                                <li class="list-group-item ">
+                                    <a href="use-cases.html"><span><i class='fa fa-key margin-right-10 margin-top-5 faq-icon'></i></span>Use Case</a>
+                                </li>
+								<li class="list-group-item ">
+                                    <a href="whitelabel.html"><span><i class='fa fa-file margin-right-10 margin-top-5 faq-icon'></i></span>White Label</a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                        <!-- /CATEGORIES -->
+                    </div>
+                    <div class='col-sm-9'>
+                        <!--<div class='col-sm-12'>
+                            <h3 class='visible-xs visible-sm text-center'>Developer Pricing</h3>
+                        </div>-->
+                        <div class="col-sm-12">
+                            <h3>Developer Pricing</h3>
+                            <p>TringMe APIs are available for FREE to the developer community to integrate in all kinds of applications, including commercial applications.</p>
+                            <hr />
+                            <h3>Free APIs & Source Code</h3>
+                            <p>Not only APIs, but complete source code including fully working sample applications, helper files which make it easier to invoke the APIs in specific languages are available for developers to use and change as they wish.</p>
+                            <hr />
+                            <h3>Free Support</h3>
+                            <p>In addition to sample source files,API documentation, FAQ etc., TringMe also provides free support to the developer community to ensure that they can integrate TringMe APIs in their application and get going quickly. There are no charges for using TringMe support either.</p>
+                            <hr />
+                            <h3>Pay only for Calls/SMS</h3>
+                            <p>Not only APIs, but complete source code including fully working sample applications, helper files which make it easier to invoke the APIs in specific languages are available for developers to use and change as they wish.</p>
+                            <hr />
+                            <h3>Free APIs & Source Code</h3>
+                            <p>There are no hidden charges whatsoever. TringMe will only charge you for Calls and SMS that are placed from your account. Review the detailed billing section for precise information.</p>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- / -->
+        <!-- /ContactSupport -->
+        <div class="callout alert alert-transparent noborder noradius nomargin paddding-60" style=' background-color: #f9fafc;'>
+            <div class="text-center">
+
+                <p class='size-18'>If you are an enterprise and would like to know better how TringMe can help you reduce cost and at the same time benefit you, <br />please send a mail to <a href="mailto:bizdev@tringme.com" class="redh1-a">bizdev@tringme.com</a></p>
+
+            </div>
+        </div>
+        <!-- /ContactSupport -->
+       
+	   <!-- FOOTER -->
+        <footer id="footer">
+		<div class="container">
+		<tringmesection cref="footer.html">
+                <div class="row" id="desktopFooter">
+
+                 <div class="col-md-2">
+			 <div class="togglef toggle-transparent-body toggle-margin-top-0">
+
+			    <div class="togglef footer active">
+					<label>About</label>
+					<div class="toggle-content">
+						<ul class="footer-links list-unstyled">
+							<li><a href="../about-us.html">TringMe</a></li>
+							<li><a href="../career.html">Career</a></li>
+							<li><a href="../news.html">In News</a></li>
+							<li><a href="../contact.html">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+        </div>
+        <div class="col-md-3">
+			<div class="togglef toggle-transparent-body toggle-margin-top-0">
+
+				<div class="togglef footer">
+					<label>Explore TringMe</label>
+					<div class="toggle-content">
+						<ul class="footer-links list-unstyled">
+							<li><a href="../international-call-rates.html">International Call Rates</a></li>
+							<li><a href="../referral-program.html">Earn Bonus Credits</a></li>
+							<li><a href="../developer/overview.html">Developer</a></li>
+							<li><a href="../developer/wholesale-voip.html">Wholesale VoIP</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+            
+        </div>
+        <div class="col-md-3">
+			<div class="togglef toggle-transparent-body toggle-margin-top-0">
+
+				<div class="togglef footer">
+					<label>Help</label>
+					<div class="toggle-content">
+						<ul class="footer-links list-unstyled">
+							<!-- <li><a href="../how-to-use-tringme.html">How To Use</a></li> -->
+							<li><a href="../faq.html">FAQ</a></li>
+							<li><a href="../contact-support.html">Support</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+        </div>
+        <div class="col-md-4">
+
+            <!-- Newsletter Form -->
+            <div class="col-sm-6 padding-20 padding-left-0" style='padding-left:0px !important;padding-top: 0px !important;'>
+                <a target='_blank' href='https://play.google.com/store/apps/details?id=com.tringme.android&referrer=utm_source%3Dtringmeweb'><img src='../assets/images/google-play-store.png' /></a>
+            </div>
+            <div class="col-sm-6 padding-20" style='padding-left:0px !important;padding-top: 0px !important;'>
+                <a target='_blank' href='https://itunes.apple.com/app/apple-store/id1050425742?pt=117979707&ct=tringmeweb&mt=8'><img src='../assets/images/apple-store.png' /></a>
+            </div>
+            <h4 class="letter-spacing-1 col-sm-12 no-margin padding-0">Stay Connected</h4>
+
+
+
+            <!-- Social Icons -->
+            <div class="margin-top-20">
+                <a href="https://facebook.com/tringme" class="social-icon social-icon-round social-icon-border social-facebook"  data-placement="bottom" title="Facebook">
+                    <i class="icon-facebook"></i>
+                </a>
+                <a href="https://twitter.com/tringme" class="social-icon social-icon-round social-icon-border social-twitter"  data-placement="top" title="Twitter">
+                    <i class="icon-twitter"></i>
+                </a>
+                <a href="https://plus.google.com/+Tringme" class="social-icon social-icon-round social-icon-border social-gplus"  data-placement="top" title="Google+">
+                     <i class="icon-gplus"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/tringme" class="social-icon social-icon-round social-icon-border social-linkedin" data-placement="top" title="LinkedIn">
+                    <i class="icon-linkedin"></i>
+                </a>
+                <a href="#" class="social-icon social-icon-round social-icon-border social-youtube"  data-placement="top" title="Youtube">
+                    <i class="icon-youtube"></i>
+                </a>
+
+
+
+
+
+            </div>
+            <!-- /Social Icons -->
+            <div class='col-sm-12'>
+
+            </div>
+        </div>
+        <div class='col-sm-12 margin-top-30 '>
+            <p class='margin-bottom-10 size-13'><img src="../assets/images/footer-no-emergency-call.png"><span>  No emergency calls with TringMe</span></p>
+            <p class='margin-bottom-10 size-13'>TringMe is not a replacement for your telephone and can't be used for emergency calling</p>
+        </div>
+       
+    </div>
+	</tringmesection>
+            	</div>
+            	<div class="copyright">
+                <div class="container">
+				<tringmesection cref="last_footer.html">
+                    <ul class="pull-right nomargin list-inline mobile-block margin-top-5">
+            <li><a href="../terms-of-use.html#privacy">Privacy</a></li>
+            <li>&bull;</li>
+            <li><a href="../terms-of-use.html#terms">Terms of services</a></li>
+            <li>&bull;</li>
+           <!--  <li><a href="#">Blog</a></li>
+            <li>&bull;</li> -->
+            <li><a href="../sitemap.html">Sitemap</a></li>
+            <li>&bull;</li>
+            <li><a href="../contact.html">Contact us</a></li>
+
+        </ul>
+        <img style='margin-right:10px;' src="../assets/images/footer-logo.png" />&copy; 2016 TringMe. All rights reserved.
+					</tringmesection>
+                </div>
+            </div>
+        </footer>
+        <!-- /FOOTER -->
+
+    </div>
+    <!-- /wrapper -->
+    <!-- SCROLL TO TOP -->
+    <a href="#" id="toTop"></a>
+
+
+    <!-- PRELOADER -->
+
+    <div id="preloader">
+        <div class="inner">
+            <span class="loader"></span>
+        </div>
+    </div><!-- /PRELOADER -->
+    <!-- JAVASCRIPT FILES -->
+    <script type="text/javascript">var plugin_path = '../assets/plugins/';</script>
+    <script type="text/javascript" src="../assets/plugins/jquery/jquery-2.1.4.min.js"></script>
+
+    <script type="text/javascript" src="../assets/js/scripts.js"></script>
+    <!-- REVOLUTION SLIDER -->
+    <script type="text/javascript" src="../assets/plugins/slider.revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="../assets/plugins/slider.revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="../assets/js/view/demo.revolution_slider.js"></script>
+    <script src="../assets/js/tringme.js"></script>
+    <script src="../assets/js/angucomplete-alt.js"></script>
+    <script src="../assets/js/countries.js"></script>
+	
+
+</body>
+</html>

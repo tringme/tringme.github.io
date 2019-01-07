@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd"><html><body><div class="col-md-9 tm-dialpad-area clearfix"><div class="tm-content-header clearfix"><div class="heading-text tm-alignleft"><h2 class="title-text-ad">Account Information</h2></div></div><div class="tm-content-body min-height-white-part-set  min-height-433  clearfix"><form class="row accountinfo"><div class="col-md-6 col-sm-6 mar-tb-30px mar-b0 mobile-margin-b-0"><div class="form-group"><label for="username" class="col-sm-4 control-label-pull-left">User ID</label><div class="col-sm-8"><input type="text" class="form-control-b mar-b13" id="username" placeholder="{{user.uid}}" disabled></div></div><div class="form-group"><label for="exampleInputEmail2" class="col-sm-4 control-label-pull-left">Email</label><div class="col-sm-8"><input type="email" class="form-control-b mar-b13" id="exampleInputEmail2" placeholder="{{user.email}}" disabled></div></div><div class="form-group"><label for="Phoneno" class="col-sm-4 control-label-pull-left">Phone Number</label><div class="col-sm-8"><input type="text" name="pnum" class="form-control-b mar-b13" id="Phoneno" placeholder="+{{user.phone}}" disabled><a href="#/setting/changephonenumber"><button class="btn btn-blue btn-pad-icon" type="button"><i class="tm-i-edit"></i></button></a></div></div></div><div class="col-md-6 col-sm-6 mar-tb-30px mobile-margin-b-0 mar-b0 mobile-margin-t-0 form-control-b1"><div class="form-group"><label for="currentpass" class="col-sm-5 control-label-pull-left"> Current Password</label><div class="col-sm-7"><input type="password" ng-model="oldpassword" class="form-control-b mar-b13 ng-invalid-required" required="required" id="currentpass" placeholder=""></div></div><div class="form-group"><label for="newpass" class="col-sm-5 control-label-pull-left">New Password</label><div class="col-sm-7"><input type="password" ng-model="newpassword" class="form-control-b mar-b13 ng-invalid-required" required="required" id="newpass" placeholder=""></div></div><div class="form-group"><label for="confirmpass" class="col-sm-5 control-label-pull-left ">Confirm Password</label><div class="col-sm-7"><input type="password" ng-model="confirmpassword" ng-match="newpassword" class="form-control-b mar-b13 ng-invalid-required" required="required" id="confirmpass" placeholder=""><span ng-show="IsMatch">Password have to match!</span></div></div></div><div class="col-xs-12"><div class="form-group"><div class="col-xs-12"><div class="checkbox"><label class="pull-left"><input type="checkbox"></label><i class="text-italic">Yes, notify me about Special Offers, New Features &amp; Other Stuff from TringMe.</i></div><button type="submit" ng-click="setpassword();" class="btn btn-gray pull-right mar-t10 mobile-float-left">SAVE</button></div></div></div><div class="col-xs-12"><hr></div></form><div class="col-sm-5 "><div class="earnedcredit"><div class="pearn"><p>TringMe Credits </p></div><div class="haval pull-left"><h2><span class="">${{user.credits}}</span></h2></div><div class="avalbtn pull-right mobile-float-left mobile-width-100% mar-b10"><a href="#payment"><button type="button" class="btn btn-green btn-font-change mar-b10">BUY NOW</button></a></div></div></div><div class="col-sm-7 "><div class="earnedcredit"><div class="pearn"><p>Bonus Credit {{appdata.inprogress}} </p></div><div class="haval pull-left"><h2>${{user.referbonus}}</h2></div><div class="avalbtn pull-right mobile-float-left mobile-width-100% mar-b10"><a href="#"><button type="button" class="btn btn-gray mar-b10" ng-click="confirmRedeemBonus();" ng-disabled="user.referbonus &lt;= 0">REDEEM NOW</button></a><a href="#/setting/bonus"><button type="button" class="btn btn-blue btn-blue-font-change mar-b10">History</button></a></div></div></div></div></div><script>
+
+ // setTimeout(function(){
+//    console.log('done');
+//    $('.currencyInput').parent().html($('.currencyInput').html().replace('$',''));
+//
+//  },1000);
+//
+//  setInterval(function(){
+//    console.log('test');
+//  },100);
+//
+//
+//document.getElementById('editsave').onclick = function() {
+//    document.getElementById('Phoneno').removeAttribute('disabled');
+//	$("#Phoneno").focus();
+//};
+//
+//$("input#Phoneno").keydown(function(e){
+//  if($("input#Phoneno").val().length == 0){
+//		$("input#Phoneno").val('+'+$("input#Phoneno").val());
+//		}
+//		});
+//
+//$('.currencyInput').currency({
+// // The 3 digit ISO code you want to display your currency in
+// region: "INR",
+//
+// // Thousands separator
+// thousands: ",",
+//
+// // Decimal separator
+// decimal: ".",
+//
+// // How many decimals to show
+// decimals: 2,
+//
+// // Hide any prefix
+// hidePrefix: true,
+// // Hide any postfix
+// hidePostfix: true,
+//
+// // If converting, the 3 digit ISO code you want to convert from,
+// convertFrom: "USD",
+//
+// // Loading message appended to values while converting
+// convertLoading: "(Converting...)",
+//
+// // Location of convert.php file
+// convertLocation: "convert.php"
+//
+// });
+//
+//$("#Phoneno").keypress(function (e){
+//  var charCode = (e.which) ? e.which : e.keyCode;
+//  if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+//    return false;
+//  }
+//});
+
+</script></body></html>

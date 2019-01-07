@@ -1,0 +1,1063 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]>			<html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>			<html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8" />
+    <title>Billing, Charging and Call Records APIs | TringMe</title>
+    <meta name="keywords" content="billing records api, charging records api, call records api, TringMe" />
+    <meta name="description" content="TringMe billing, charging and call records api." />
+    <meta name="Author" content="https://tringme.com" />
+
+    <!-- mobile settings -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <!-- WEB FONTS : use %7C instead of | (pipe) -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+
+    <!-- CORE CSS -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+
+    <!-- THEME CSS -->
+    <link href="../assets/css/essentials.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+    <!-- PAGE LEVEL SCRIPTS -->
+    <link href="../assets/css/header-1.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/color_scheme/red.css" rel="stylesheet" type="text/css" id="color_scheme" />
+
+    <!-- REVOLUTION SLIDER -->
+    <link href="../assets/plugins/slider.revolution/css/extralayers.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/slider.revolution/css/settings.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="https://api.tringme.com/tringmewebapi.js"></script>
+    <link href="../assets/css/angucomplete-alt.css" rel="stylesheet">
+	
+	<!-- FEVICON -->
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="../apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="../apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="../favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="../favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="../favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="../favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="../favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="TringMe"/>
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="../mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="../mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="../mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="../mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="../mstile-310x310.png" />
+
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','analytics');
+
+		analytics('create', 'UA-74062941-1', 'auto');
+		analytics('send', 'pageview');
+	</script>
+	
+</head>
+<body ng-app="app" class="smoothscroll enable-animation">
+    <!-- wrapper -->
+    <div id="wrapper" ng-controller="MainController">
+        <div id="header" class="sticky clearfix">
+
+            <!-- TOP NAV -->
+		<tringmesection cref="header.html">
+            <header id="topNav">
+                <div class="container">
+
+                    <!-- Mobile Menu Button -->
+                    <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Logo -->
+                    <a class="logo pull-left" href="../index.html">
+                        <img src="../assets/images/tringme-logo.png" alt="tringme logo" /> <!-- light logo -->
+                        <!-- <img src="assets/images/logo_dark.png" alt="" /> --> <!-- dark logo -->
+                    </a>
+		    
+                    <div class="navbar-collapse pull-right nav-main-collapse collapse submenu-dark">
+                        <nav class="nav-main">
+                            <ul id="topMain" class="nav nav-pills nav-main">
+                                <li class="dropdown">
+                                    <a href="../index.html">
+                                        Home
+                                    </a>
+
+                                </li>
+                               
+                                <li class="dropdown">
+                                    <a href="../international-call-rates.html">
+                                        Rates
+                                    </a>
+                                   
+                                </li>
+                                <li class="dropdown">
+                                    <a href="../developer/overview.html">
+                                        Developer
+                                    </a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="../help.html">
+                                       
+                                        Help
+                                    </a>
+                                </li>
+
+                                <li class="dropdown ">
+                                    <a href="/login" class="hidden-lg hidden-md">
+                                        {{logintext}}
+                                    </a>
+                                    <a href="/login" class="hidden-xs hidden-sm">
+                                        <span class='btn login'>
+                                            {{logintext}}
+                                        </span>
+                                    </a>
+                                </li>
+                            
+
+                            </ul>
+
+                        </nav>
+                    </div>
+		    
+
+                </div>
+            </header>
+		</tringmesection>
+            <!-- /Top Nav -->
+
+        </div>
+        <section class="page-header">
+            <div class="container">
+
+                <h1>Billing, Charging and Call Records APIs</h1>
+
+                <!-- breadcrumbs -->
+                <ol class="breadcrumb visible-lg visible-md">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="overview.html">Developer</a></li>
+                    <li><a href="#">Billing, Charging and Call Records APIs</a></li>
+
+                </ol><!-- /breadcrumbs -->
+
+            </div>
+        </section>
+        <!-- /PAGE HEADER -->
+
+
+        <section class='padding-xs'>
+            <div class="container">
+                <div class='row'>
+                    <div class='col-sm-3'>
+                        <!-- CATEGORIES -->
+                        <div class="side-nav margin-bottom-60">
+                           <div class="side-nav-head">
+                                 <button class="fa fa-bars"></button>
+								 <h4>Topics</h4>
+                            </div>
+                            <ul class="list-group list-group-bordered list-group-noicon uppercase">
+                               
+                                <li class="list-group-item">
+                                    <a href="restapi.html">Rest API</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="usermanagementapi.html">Account Management</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="callconfsmsapi.html">Calls, Conferencing & SMS</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="destinations.html">Destinations</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="channelapi.html">Channels</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="sipanddid.html">SIP & Inward Dialing</a>
+                                </li>
+                                <li class="list-group-item active">
+                                    <a href="#" class='dropdown-toggle'>Billing Charging & CDR</a>
+                                    <ul>
+                                        <li><a href="#getallrecords" class="scrollTo">Get All Records</a></li>
+                                        <li><a href="#retrivesavedfiles" class="scrollTo">Retrive Saved Files</a></li>
+                                        <li><a href="#setnotificationurl" class="scrollTo">Set Notification URL</a></li>
+                                        <li><a href="#phonecredits" class="scrollTo">Setting Phone Credits</a></li>
+                                        <li><a href="#sipcredits" class="scrollTo">Buy SIP Credits</a></li>
+                                        <li><a href="#phonensms" class="scrollTo">Get Phone & SMS Rates</a></li>
+                                        <li><a href="#phoneosms" class="scrollTo">Get Phone/SMS Rates</a></li>
+                                    </ul>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="realtimenotificationsapi.html">Notifications</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <!-- /CATEGORIES -->
+                    </div>
+                    <div class='col-sm-9'>
+                        <!--<div class='col-sm-12'>
+                            <h3 class='visible-xs visible-sm text-center'>Basics of TringMe API</h3>
+                        </div>-->
+                        <div class="col-sm-12">
+                            <h3 id="getallrecords">Billing, Charging and Call Records APIs</h3>
+                            <p>TringMe platform including VoicePHP is completely free. In most cases, TringMe only charges for the phone calls. However, if none of the leg is over phone, we need to at least charge minimum just to meet the infrastructure cost and resource utilization. All such calls will be charged at the rate 1 sipcredits/minute.</p>
+                            <p>SIP credits can be purchased from TringMe website or in bulk by contacting us. All Conference call and SIP legs will always be charged at the rate 1 sipcredit/minute irrespective of other legs</p>
+
+                            <p><strong>Simultaneous Calls</strong></p>
+                            <p>TringMe’s platform allows placing unlimited simultaneous calls; only limited by credit balance. By default, TringMe reserves credits for 90 minutes before placing the call. These ‘reserved’ credits are freed once the call ends and only the charges for the actual duration of the call are applied to the user.</p>
+                            <p>The default ‘reserved’ credits can be over-ridden by specifying the ‘duration’ parameter in ‘call’ or Flash APIs in which case the credits reserved will be only for the specified duration only.</p>
+                            <p><strong> Conference Charges</strong></p>
+                            <p>Conference charges are as follows:</p>
+                            <ul class="list-unstyled">
+                                <li class="margin-bottom-10"><i class="fa fa-check"></i>Each Conference Charge: $1 USD for first hour, 0.25USD per hour thereafter.</li>
+                                <li class="margin-bottom-10"><i class="fa fa-check"></i>Usage charge: 1 sip credit per participant per minute.</li>
+                                <li class="margin-bottom-10"><i class="fa fa-check"></i>If used with callback facility, phone charges as actuals.</li>
+                            </ul>
+                            <p>If you plan to use for larger quantity, we recommend our private switch. Please contact us for further details on this.</p>
+
+
+
+                            <hr  />
+                            <h3>Retrieving Call Records</h3>
+                            <p>Access to complete billing and call-records is provided by using this API. The call-record includes all the relevant call-details (phone number, call- duration, time, call-tag etc.). It returns the data in JSON format.</p>
+                            <table class="table table-bordered table-striped table-responsive table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Parameters</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>op</td>
+                                        <td>getcdr</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cookie</td>
+                                        <td>Cookie which was obtained using ‘login’.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>id [optional]</td>
+                                        <td>All call records greater than specified ‘id’ will be retrieved.</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>starttime [optional]</td>
+                                        <td>Starting time from which the call records should be retrieved. This should be specified in seconds relative to the time of invocation.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>endtime [optional]</td>
+                                        <td>Ending time till which the call records should be retrieved. This should be specified in seconds relative to the time of invocation.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>tag [optional]</td>
+                                        <td>If tag is specified, then call records matching that tag are retrieved. Wildcards (*, ?) are supported to retrieve matching call records as well.</td>
+                                    </tr>
+                                  
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Sample Request URL</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <code>
+                                                http://api.tringme.com/api.php?op=getcdr&cookie= 
+                                                12345678901234567890 12345678901&json=1 &apikey=b1234567890123456789 0123456789012345
+                                                &sig=f1234567890123456789 012345678901
+                                            </code>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Expected Response</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            'OKJ' alongwith call records of completed calls in JSON format. The timestamp of the call records will be in seconds relative to the time of invocation of the API.Following are the‘type’s of records that will be returned.:
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Type</strong></td>
+                                        <td><strong>Description </strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>Call</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>SMS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Amount transferred using ‘setphonecredits’ API</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>SIP Credits Purchase</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>SIP</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>Conference</td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Sample Responses</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            OKJ<br/> [{"id":"12382", "phone":"18585551212", "duration":"4", "charges":"0.0120",
+                                            "type":"0", "calltag":"", "calltime":"15365"}, {"id":"12355", "phone":"441234567890", "duration":"3", "charges":"0.0100", 
+                                            "type":"0", "calltag":"", "calltime":"141335"}, {"id":"12345", "phone":"911234567890", "duration":"0", "charges":"0.0400",
+                                            "type":"1", "calltag":"", "calltime":"152396"}]
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <hr id="retrivesavedfiles" />
+                            <h3>Retrieving Files (Recordings, Voicemails etc.)</h3>
+                            <p>Retrieve file from TringMe infrastructure. The file may be deleted once retrieved and hence should be stored by the invoker. Any file that is newly made available to the system (for e.g. a file recorded using VoicePHP ‘record’ or a newly received voicemail) will be available for download for a maximum period of 72 hours, after which it may be deleted.</p>
+                            <table class="table table-bordered table-striped table-responsive table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Parameters</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>op</td>
+                                        <td>getfile</td>
+                                    </tr>
+                                    <tr>
+                                        <td>id</td>
+                                        <td>
+                                            File ‘id’ as returned by VoicePHP ‘record’ API or ‘getvoicemail’.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Sample Request URL</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <code>
+                                                http://api.tringme.com/api.php?op=getcdr&cookie=
+                                                123456789012345678 9012345678901&json=1 &apikey=b1234567890123456 7890123456789012345
+                                                 &sig=f12345678901234567 89012345678901
+                                            </code>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Expected Response</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            OK
+                                        </td>
+                                    </tr>
+                                   
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Sample Responses</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            OK
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                            <hr id="setnotificationurl" />
+                            <h3>Notification URL</h3>
+                            <p>TringMe also provides a notification mechanism whereby developers can listen for notifications to retrieve call details including call-duration, total charges, call-tag and so on. API holder can listen to these notifications and do the appropriate mark-up processing before inserting the call-related information in their database.</p>
+                            <table class="table table-bordered table-striped table-responsive table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Parameters</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>op</td>
+                                        <td>setnotifyurl</td>
+                                    </tr>
+                                    <tr>
+                                        <td>url</td>
+                                        <td>
+                                            URL where notifications should be sent.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>flag [optional]</td>
+                                        <td>
+                                            Reserved
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Sample Request URL</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <code>
+                                                http://api.tringme.com/api.php?op=setnotifyurl
+                                                 &url=http://somedomain.com
+                                                 &apikey=b123456789012345678 90123456789012345
+                                                 &sig=f1234567890123456789 012345678901
+                                            </code>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Expected Response</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            OK
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Sample Responses</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            OK
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                            <hr id="phonecredits" />
+                            <h3>Setting Phone Credits In User Account</h3>
+                            <p>This API provides a way for an API account holder to transfer credits to the user’s account.</p>
+                            <table class="table table-bordered table-striped table-responsive table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Parameters</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>op</td>
+                                        <td>setphonecredits</td>
+                                    </tr>
+                                    <tr>
+                                        <td>amount</td>
+                                        <td>
+                                            Amount in USD that should be transferred. In case of private user, negative amount can be specified. It will debit the amount from the user account and credit it to API holder account.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>cookie [optional]</td>
+                                        <td>
+                                            Cookie which was obtained using ‘login’.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>email [optional]</td>
+                                        <td>
+                                            Email address of the user. This is only required in case of private account and if ‘cookie’ is omitted.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>private [optional]</td>
+                                        <td>
+                                            Private user. This specifies if the user to whose account the credits are being set is private. This will only be used if ‘email’ has been specified.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Sample Request URL</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <code>
+                                                http://api.tringme.com/api.php ?op=setphonecredits
+                                                &amount=1.0&apikey=b123456789012345678 90123456789012345
+                                                 &sig=f123456789012345678 9012345678901
+                                            </code>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Expected Response</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            OK ‘&lt;transaction number&gt;’
+                                            <br/>
+                                            The &lt;transaction number&gt; is only meant for reference purposes.</td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Sample Responses</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            OK 890123456789012345678901
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                            <hr id="sipcredits" />
+                            <h3>Buy SIP Credits</h3>
+                            <p>This API provides a way for an user to transfer credits to sip.</p>
+                            <table class="table table-bordered table-striped table-responsive table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Parameters</th>
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>op</td>
+                                        <td>buysipcredits</td>
+                                    </tr>
+                                    <tr>
+                                        <td>amount</td>
+                                        <td>
+                                            Amount in USD that should be transferred. In case of private user, negative amount can be specified. It will debit the amount from the user account and credit it to API holder account.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>cookie [optional]</td>
+                                        <td>
+                                            Cookie which was obtained using ‘login’.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Sample Request URL</th>
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <code>
+                                                http://api.tringme.com/api.php? op=buysipcredits
+                                                &amount=1.0 &apikey=b123456789012345678 90123456789012345
+                                                &sig=f123456789012345 6789012345678901
+                                            </code>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Expected Response</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            OK
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Sample Responses</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            OK
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                            <hr id="phonensms" />
+                            <h3>Getting Phone and SMS Rates</h3>
+                            <p>This API provides a way to get the call and SMS rates for a specific or comma seperated list of phone numbers.</p>
+                            <table class="table table-bordered table-striped table-responsive table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Parameters</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>op</td>
+                                        <td>getrates</td>
+                                    </tr>
+                                    <tr>
+                                        <td>dest</td>
+                                        <td>
+                                            Phone number for which rates are required. It can be specified as a partial phone number too (for e.g. 44991 would retrieve rates for UK).
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Sample Request URL</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <code>
+                                                http://api.tringme.com/api.php ?op=getrates
+                                                &dest=15015551234 &apikey=b1234567890123456789 0123456789012345
+                                                &sig=f1234567890123 456789012345678901
+                                            </code>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Expected Response</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            OKJ &lt;json formated charge information&gt;
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Sample Responses</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            OKJ <br/>
+                                            {"phone":"15015551234", "destination":"United States", "rate":1.3,"rate2":1.2, "slotdur":15,"smsrate":7, "smsdestination":"United States"}
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                            <hr id="phoneosms" />
+                            <h3>Getting either Phone or SMS Rates</h3>
+                            <p>This API provides a way to get the call or SMS rate for a specific phone number.</p>
+                            <table class="table table-bordered table-striped table-responsive table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Parameters</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>op</td>
+                                        <td>getrates</td>
+                                    </tr>
+                                    <tr>
+                                        <td>dest</td>
+                                        <td>
+                                            Phone number for which rates are required. It can be specified as a partial phone number too (for e.g. 44991 would retrieve rates for UK).
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>type [optional]</td>
+                                        <td>
+                                            Type of rate requested. 0 specifies phone rate and 1 specifies SMS rate. The default value is 0.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Sample Request URL</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <code>
+                                                http://api.tringme.com/api.php?op=getrate
+                                                &dest=15015551234 &apikey=b1234567890123456789 0123456789012345
+                                                &sig=f1234567890123456 789012345678901
+                                            </code>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Expected Response</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            OK &lt;charge in cents&gt; &lt;location to which number belongs&gt;
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Sample Responses</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            OK 1.3 United States
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+
+            </div>
+        </section>
+        <!-- / -->
+        <!-- /ContactSupport -->
+        <div class="callout alert alert-transparent noborder noradius nomargin paddding-60" style=' background-color: #f9fafc;'>
+            <div class="text-center">
+
+                <p class='size-18'>If you are an enterprise and would like to know better how TringMe can help you reduce cost and at the same time benefit you, <br />please send a mail to <a href="mailto:bizdev@tringme.com" class="redh1-a">bizdev@tringme.com</a></p>
+
+            </div>
+        </div>
+        <!-- /ContactSupport -->
+        <!-- FOOTER -->
+        <footer id="footer">
+		<div class="container">
+		<tringmesection cref="footer.html">
+                <div class="row" id="desktopFooter">
+
+                 <div class="col-md-2">
+			 <div class="togglef toggle-transparent-body toggle-margin-top-0">
+
+			    <div class="togglef footer active">
+					<label>About</label>
+					<div class="toggle-content">
+						<ul class="footer-links list-unstyled">
+							<li><a href="../about-us.html">TringMe</a></li>
+							<li><a href="../career.html">Career</a></li>
+							<li><a href="../news.html">In News</a></li>
+							<li><a href="../contact.html">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+        </div>
+        <div class="col-md-3">
+			<div class="togglef toggle-transparent-body toggle-margin-top-0">
+
+				<div class="togglef footer">
+					<label>Explore TringMe</label>
+					<div class="toggle-content">
+						<ul class="footer-links list-unstyled">
+							<li><a href="../international-call-rates.html">International Call Rates</a></li>
+							<li><a href="../referral-program.html">Earn Bonus Credits</a></li>
+							<li><a href="../developer/overview.html">Developer</a></li>
+							<li><a href="../developer/wholesale-voip.html">Wholesale VoIP</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+            
+        </div>
+        <div class="col-md-3">
+			<div class="togglef toggle-transparent-body toggle-margin-top-0">
+
+				<div class="togglef footer">
+					<label>Help</label>
+					<div class="toggle-content">
+						<ul class="footer-links list-unstyled">
+							<!-- <li><a href="../how-to-use-tringme.html">How To Use</a></li> -->
+							<li><a href="../faq.html">FAQ</a></li>
+							<li><a href="../contact-support.html">Support</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+        </div>
+        <div class="col-md-4">
+
+            <!-- Newsletter Form -->
+            <div class="col-sm-6 padding-20 padding-left-0" style='padding-left:0px !important;padding-top: 0px !important;'>
+                <a target='_blank' href='https://play.google.com/store/apps/details?id=com.tringme.android&referrer=utm_source%3Dtringmeweb'><img src='../assets/images/google-play-store.png' /></a>
+            </div>
+            <div class="col-sm-6 padding-20" style='padding-left:0px !important;padding-top: 0px !important;'>
+                <a target='_blank' href='https://itunes.apple.com/app/apple-store/id1050425742?pt=117979707&ct=tringmeweb&mt=8'><img src='../assets/images/apple-store.png' /></a>
+            </div>
+            <h4 class="letter-spacing-1 col-sm-12 no-margin padding-0">Stay Connected</h4>
+
+
+
+            <!-- Social Icons -->
+            <div class="margin-top-20">
+                <a href="https://facebook.com/tringme" class="social-icon social-icon-round social-icon-border social-facebook"  data-placement="bottom" title="Facebook">
+                    <i class="icon-facebook"></i>
+                </a>
+                <a href="https://twitter.com/tringme" class="social-icon social-icon-round social-icon-border social-twitter"  data-placement="top" title="Twitter">
+                    <i class="icon-twitter"></i>
+                </a>
+                <a href="https://plus.google.com/+Tringme" class="social-icon social-icon-round social-icon-border social-gplus"  data-placement="top" title="Google+">
+                     <i class="icon-gplus"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/tringme" class="social-icon social-icon-round social-icon-border social-linkedin" data-placement="top" title="LinkedIn">
+                    <i class="icon-linkedin"></i>
+                </a>
+                <a href="#" class="social-icon social-icon-round social-icon-border social-youtube"  data-placement="top" title="Youtube">
+                    <i class="icon-youtube"></i>
+                </a>
+
+
+
+
+
+            </div>
+            <!-- /Social Icons -->
+            <div class='col-sm-12'>
+
+            </div>
+        </div>
+        <div class='col-sm-12 margin-top-30 '>
+            <p class='margin-bottom-10 size-13'><img src="../assets/images/footer-no-emergency-call.png"><span>  No emergency calls with TringMe</span></p>
+            <p class='margin-bottom-10 size-13'>TringMe is not a replacement for your telephone and can't be used for emergency calling</p>
+        </div>
+       
+    </div>
+	</tringmesection>
+            	</div>
+            	<div class="copyright">
+                <div class="container">
+				<tringmesection cref="last_footer.html">
+                    <ul class="pull-right nomargin list-inline mobile-block margin-top-5">
+            <li><a href="../terms-of-use.html#privacy">Privacy</a></li>
+            <li>&bull;</li>
+            <li><a href="../terms-of-use.html#terms">Terms of services</a></li>
+            <li>&bull;</li>
+           <!--  <li><a href="#">Blog</a></li>
+            <li>&bull;</li> -->
+            <li><a href="../sitemap.html">Sitemap</a></li>
+            <li>&bull;</li>
+            <li><a href="../contact.html">Contact us</a></li>
+
+        </ul>
+        <img style='margin-right:10px;' src="../assets/images/footer-logo.png" />&copy; 2016 TringMe. All rights reserved.
+					</tringmesection>
+                </div>
+            </div>
+        </footer>
+        <!-- /FOOTER -->
+
+    </div>
+    <!-- /wrapper -->
+    <!-- SCROLL TO TOP -->
+    <a href="#" id="toTop"></a>
+
+
+    <!-- PRELOADER -->
+
+    <div id="preloader">
+        <div class="inner">
+            <span class="loader"></span>
+        </div>
+    </div><!-- /PRELOADER -->
+    <!-- JAVASCRIPT FILES -->
+    <script type="text/javascript">var plugin_path = '../assets/plugins/';</script>
+    <script type="text/javascript" src="../assets/plugins/jquery/jquery-2.1.4.min.js"></script>
+
+    <script type="text/javascript" src="../assets/js/scripts.js"></script>
+    <!-- REVOLUTION SLIDER -->
+    <script type="text/javascript" src="../assets/plugins/slider.revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="../assets/plugins/slider.revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="../assets/js/view/demo.revolution_slider.js"></script>
+    <script src="../assets/js/tringme.js"></script>
+    <script src="../assets/js/angucomplete-alt.js"></script>
+    <script src="../assets/js/countries.js"></script>
+	
+
+</body>
+</html>

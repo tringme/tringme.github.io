@@ -1,0 +1,23 @@
+#slider-inner-div {
+	background-image: url('../../assets/images/newbanner/bg.jpg');
+}
+#no-matter-section {
+	background-image: url('../../assets/images/no-matter-section.png');
+}
+.call-browser-android-iphone {
+	background-color:#fff !important; 
+	color:#EB3849 !important; 
+	border:#fff !important;
+}
+.bg-f9fafc {
+	background-color: #f9fafc !important;
+}
+
+@media screen and (max-width:767px) {
+.bg-f9fafc .text-center .img-responsive {
+  height: auto;
+  width: auto;
+  padding:10px 0; 
+}
+
+}

@@ -1,0 +1,687 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]>			<html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>			<html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8" />
+    <title>Flash API | TringMe</title>
+    <meta name="keywords" content="flash api, TringMe" />
+    <meta name="description" content="TringMe flash api enables developers to quickly create their own Adobe Flash, Flex or AIR application." />
+    <meta name="Author" content="https://tringme.com" />
+
+    <!-- mobile settings -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <!-- WEB FONTS : use %7C instead of | (pipe) -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+
+    <!-- CORE CSS -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+
+    <!-- THEME CSS -->
+    <link href="../assets/css/essentials.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+    <!-- PAGE LEVEL SCRIPTS -->
+    <link href="../assets/css/header-1.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/color_scheme/red.css" rel="stylesheet" type="text/css" id="color_scheme" />
+
+    <!-- REVOLUTION SLIDER -->
+    <link href="../assets/plugins/slider.revolution/css/extralayers.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/slider.revolution/css/settings.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="https://api.tringme.com/tringmewebapi.js"></script>
+    <link href="../assets/css/angucomplete-alt.css" rel="stylesheet">
+	
+	<!-- FEVICON -->
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="../apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="../apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="../favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="../favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="../favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="../favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="../favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="TringMe"/>
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="../mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="../mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="../mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="../mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="../mstile-310x310.png" />
+	
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','analytics');
+
+		analytics('create', 'UA-74062941-1', 'auto');
+		analytics('send', 'pageview');
+	</script>
+
+	
+</head>
+<body ng-app="app" class="smoothscroll enable-animation">
+    <!-- wrapper -->
+    <div id="wrapper" ng-controller="MainController">
+        <div id="header" class="sticky clearfix">
+
+            <!-- TOP NAV -->
+		<tringmesection cref="header.html">
+            <header id="topNav">
+                <div class="container">
+
+                    <!-- Mobile Menu Button -->
+                    <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Logo -->
+                    <a class="logo pull-left" href="../index.html">
+                        <img src="../assets/images/tringme-logo.png" alt="tringme logo" /> <!-- light logo -->
+                        <!-- <img src="assets/images/logo_dark.png" alt="" /> --> <!-- dark logo -->
+                    </a>
+		    
+                    <div class="navbar-collapse pull-right nav-main-collapse collapse submenu-dark">
+                        <nav class="nav-main">
+                            <ul id="topMain" class="nav nav-pills nav-main">
+                                <li class="dropdown">
+                                    <a href="../index.html">
+                                        Home
+                                    </a>
+
+                                </li>
+                               
+                                <li class="dropdown">
+                                    <a href="../international-call-rates.html">
+                                        Rates
+                                    </a>
+                                   
+                                </li>
+                                <li class="dropdown">
+                                    <a href="../developer/overview.html">
+                                        Developer
+                                    </a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="../help.html">
+                                       
+                                        Help
+                                    </a>
+                                </li>
+
+                                <li class="dropdown ">
+                                    <a href="/login" class="hidden-lg hidden-md">
+                                        {{logintext}}
+                                    </a>
+                                    <a href="/login" class="hidden-xs hidden-sm">
+                                        <span class='btn login'>
+                                            {{logintext}}
+                                        </span>
+                                    </a>
+                                </li>
+                            
+
+                            </ul>
+
+                        </nav>
+                    </div>
+		    
+
+                </div>
+            </header>
+		</tringmesection>
+            <!-- /Top Nav -->
+
+        </div>
+        <section class="page-header">
+            <div class="container">
+
+                <h1>Flash API</h1>
+
+                <!-- breadcrumbs -->
+                <ol class="breadcrumb visible-lg visible-md">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="overview.html">Developer</a></li>
+                    <li><a href="#">Flash API</a></li>
+
+                </ol><!-- /breadcrumbs -->
+
+            </div>
+        </section>
+        <!-- /PAGE HEADER -->
+
+
+        <section class='padding-xs'>
+            <div class="container">
+                <div class='row'>
+                    <div class='col-sm-3'>
+                        <!-- CATEGORIES -->
+                        <div class="side-nav margin-bottom-60">
+                            <div class="side-nav-head">
+                                <button class="fa fa-bars"></button>
+								 <h4>Topics</h4>
+                            </div>
+                            <ul class="list-group list-group-bordered list-group-noicon uppercase">
+                                
+                                <li class="list-group-item active">
+                                    <a href="#" class='dropdown-toggle'>Flash API</a>
+                                    <ul>
+                                        <li><a href="#makeacall" class="scrollTo">Making A Call</a></li>
+                                        <li><a href="#netconnection" class="scrollTo">Net Connection</a></li>
+                                        <li><a href="#endcall" class="scrollTo">End Call</a></li>
+                                        <li><a href="#callstatus" class="scrollTo">Call Status</a></li>
+                                        <li><a href="#widgets" class="scrollTo">TringME Flash Widgets</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <!-- /CATEGORIES -->
+                    </div>
+                    <div class='col-sm-9'>
+                      
+                        <div class="col-sm-12">
+                            <h3 id="JavaAPI">Flash API</h3>
+                            <p>This enables developers to quickly create their own Adobe Flash, Flex or AIR application based to utilize TringMe’s standards based APIs for telephony and messaging. Given the powerful functionality of Adobe Flash and the ease of use of TringMe’s APIs, developers will be able to produce compelling voice enabled apps using Adobe’s – Flash, Flex or AIR – technologies. For example, developers can create a fully-functional desktop or web-based phone on top of TringMe APIs using Adobe AIR technology.</p>
+
+                            <p>TringMe uses standard NetStream and NetConnection interfaces which have been available since Flash 7. This allows even an inexperienced flash developer to develop new widgets by writing few lines of code.</p>
+
+                            <p>Since NetConnection and NetStream are widely used and tons of documentation and help already are available on the web, readers are requested to refer those resources and we will not cover it here.</p>
+                            <h3 id="makeacall">Making Call</h3>
+                            <p>Following is an implementation of Making Call which is simple as</p>
+                            <ul class="list-unstyled grey-background">
+                                <li class="margin-bottom-10">1. Create Flash NetConnection object</li>
+                                <li class="margin-bottom-10">2. Two NetStream Objects (A & B) attached them to NetConnection</li>
+                                <li class="margin-bottom-10">3. Create Microphone Object and attach it to a NetStream A</li>
+                                <li class="margin-bottom-10">4. Publish NetStream A</li>
+                                <li class="margin-bottom-10">5. Play NetStream B</li>
+                            </ul>
+                            <p><strong>Complete working source code of a minimal phone widget is below.</strong></p>
+                            <code>nc = new NetConnection();<br/><br />
+                                // handle asynchronous notification and failures<br />
+                                nc.onStatus = ConnectStatus;<br />
+                                nc.connect(TringMeURI); <br /><br />
+                                //Create NetStream A and attach it with Microphone<br />
+
+                                nsA = new NetStream(nc);<br />
+                                mic = new Microphone.get();<br />
+                                mic.setRate(8);<br />
+                                mic.setSilenceLevel(0);<br />
+                                nsA.attachAudio(mic);<br />
+                                nsA.publish(randomstreamname, "record");<br /><br />
+
+                                //Create NetStream B and play<br />
+
+                                nsB = new NetStream(nc);<br />
+                                nsB.play("tring", -1);<br />
+                                <br />
+                            </code>
+
+                            <hr id="netconnection" />
+                            <h3>NetConnection targetURI Specification</h3>
+                            <p>To make a Flash phone call, the URI string should be formatted in one of the below mentioned specifications:</p>
+
+
+                            <table class="table table-bordered table-striped table-responsive table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Parameters</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>cookie</td>
+                                        <td>cookie or channel can be passed, as obtained from 'login' or 'setchannel' API.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>tag [Optional]</td>
+                                        <td>User supplied parameter to associate a call in the Call Data Records (obtained by 'getcdr'). 'tag' is alphanumeric only (a-z, A-Z, 0-9), and all other characters will be replaced by 'X'.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>callerid [Optional]</td>
+                                        <td>caller id is passed only if destination is SIP. To use callerid on TringMe's network requires special activation due to the privacy & security issues</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>dtmf [Optional]</td>
+                                        <td>DTMF</td>
+                                    </tr>
+                                    <tr>
+                                        <td>duration [Optional]</td>
+                                        <td>Maximum duration of the call.</td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Sample Request URL</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <code>
+                                                rtmp://sip.tringme.com/1234567890123 456789012345678901 /19125551212
+                                            </code>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Expected Response</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            OK &lt;validity&gt;'
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Sample Responses</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            OK 86400
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+
+                            <hr id="endcall" />
+                            <h3>Ending Call</h3>
+                            <p>To end the call, close NetStream by calling close method.<br/>Complete working source code of a minimal phone widget is below.</p>
+                            <code>// close stream A, it optional to close stream B as it will be automatically closed by TringMe<br/>
+
+                                nsA.close();
+                            </code>
+                            <p>If the call is terminated by called party, TringMe will close the connection. Notification will be posted to onStatus handler of class NetConnection</p>
+                            <code>
+                                function ConnectStatus(pInfo:Object) {<br/>
+                                    if (pInfo.code == "NetConnection.Connect.Success") {<br />
+                                    // do something to indicate successful connection with TringMe<br />
+                                    } else if (pInfo.code == "NetConnection.Connect.Closed" || pInfo.code == "NetConnection.Connect.Rejected") {<br />
+                                    // close streams and clean up<br />
+                                    }<br />
+                                }<br />
+
+
+                            </code>
+                            <hr id="callstatus" />
+                            <h3>Call Status Notifications in Flash</h3>
+                            <p>To receive call status notification in Flash itself , register a status handler as shown below. Currently only following status notifications are supported:</p>
+                            <p><strong>TringMe.Status.00200 - Call Connected Status</strong></p>
+                            <code>
+
+                                //Create NetConnection and connect <br/><br />
+
+                                nc.onStatus = ConnectStatus;<br />
+                                nc = new NetConnection();<br />
+                                //handle async notification and failures<br /><br />
+
+                                nc.onStatus = ConnectStatus;<br />
+                                nc.connect(TringMeURI);<br />
+
+                                //Create NetStream A and attach it with Microphone<br /><br />
+
+                                nsA = new NetStream(nc);<br />
+                                mic = new Microphone.get();<br />
+                                mic.setRate(8);<br />
+                                mic.setSilenceLevel(0);<br />
+                                nsA.attachAudio(mic);<br />
+                                nsA.publish(randomstreamname, "record");<br />
+
+                                //Create NetStream B and play<br /><br />
+
+                                nsB = new NetStream(nc);<br />
+                                nsB.onStatus = NSOnStatusHandler;<br />
+
+                                nsB.play("tring", -1);<br />
+
+                                ...<br />
+
+                                //Declare the OnStatus handler for receiving status updates.<br />
+
+                                //It should be registered as shown below<br /><br />
+
+                                NSOnStatusHandler = function(info:Object) {<br />
+                                trace(info.code);<br />
+                                    if (info.code == "TringMe.Status.00200") {<br />
+
+                                    //Call is connected ...<br />
+
+                                    }<br />
+                                }<br />
+                            </code>
+                            <hr id="widgets" />
+                            <h3>Using TringMe's Premade Flash Widgets</h3>
+                            <p>While you can build your own Flash phone widgets as described above, you can also use TringMe's premade widgets easily. Integrating these readymade widgets is as simple as adding few lines of HTML code.<br/>
+
+                                Embedding TringPhone widget<br />
+
+                                TringPhone is a Flash widget and can be embedded into your website like any other flash file (.swf) file.TringPhone takes cookie or channel as a parameter. Use 'login' or 'setchannel' API to obtain the cookie or the channel respectively. Following are the details of flash object:</p>
+
+                            <table class="table table-bordered table-striped table-responsive table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Sample Request URL</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <code>
+                                                http://login.tringme.com/swf/ tringphone.swf?channel =2b4567a90123f567890c 2345d789011
+                                            </code>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <p>Embedding Push-n-talk widget</p>
+
+                            <p>TringMe Push-n-talk is a Flash widget can be used for fixed dialing and can be embedded into your website like any other flash file (.swf) file. Any user visiting your website can just push and start talking to you without dialing any number.</p>
+
+                            <p>Push-n-talk takes following parameters.<strong>(All the parameters except 'channel' & 'name' are OPTIONAL:)</strong></p>
+
+                            <table class="table table-bordered table-striped table-responsive table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Parameters</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>channel</td>
+                                        <td>channel</td>
+                                    </tr>
+                                    <tr>
+                                        <td>name</td>
+                                        <td>Name to be displayed on Widget</td>
+                                    </tr>
+                                    <tr>
+                                        <td>dtmf</td>
+                                        <td>DTMF</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>callerid</td>
+                                        <td>Caller ID</td>
+                                    </tr>
+                                    <tr>
+                                        <td>tag</td>
+                                        <td>Call tag</td>
+                                    </tr>
+                                    <tr>
+                                        <td>duration</td>
+                                        <td>Max duration of the call</td>
+                                    </tr>
+                                    <tr>
+                                        <td>greeting</td>
+                                        <td>URL of mp3 file to be played before placing the call</td>
+                                    </tr>
+                                    <tr>
+                                        <td>postgreeting</td>
+                                        <td>URL of mp3 file to be played after the call</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ctxt</td>
+                                        <td>Call Text - Replaces default call text on the widget.Default 'Click to Call'.
+                                            <br/>
+                                            For Localization & customization.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>htxt</td>
+                                        <td>Hangup Text - Replaces default hangup text on the widget.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ttxt</td>
+                                        <td>Call Termination Text - Replaces default call termination text on the widget</td>
+                                    </tr>
+                                    <tr>
+                                        <td>background</td>
+                                        <td>URL of Background image</td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Sample Request URL</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <code>
+                                                http://login.tringme.com/swf/ tringmewidget.swf?channel= 2b4567a90123f567890c23 45d789011&name=My+Name &greeting= http://mywebsite.com/ greeting.mp3
+                                            </code>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                           
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+
+            </div>
+        </section>
+        <!-- / -->
+        <!-- /ContactSupport -->
+        <div class="callout alert alert-transparent noborder noradius nomargin paddding-60" style=' background-color: #f9fafc;'>
+            <div class="text-center">
+
+                <p class='size-18'>If you are an enterprise and would like to know better how TringMe can help you reduce cost and at the same time benefit you, <br />please send a mail to <a href="mailto:bizdev@tringme.com" class="redh1-a">bizdev@tringme.com</a></p>
+
+            </div>
+        </div>
+        <!-- /ContactSupport -->
+        
+		<!-- FOOTER -->
+        <footer id="footer">
+		<div class="container">
+		<tringmesection cref="footer.html">
+                <div class="row" id="desktopFooter">
+
+                 <div class="col-md-2">
+			 <div class="togglef toggle-transparent-body toggle-margin-top-0">
+
+			    <div class="togglef footer active">
+					<label>About</label>
+					<div class="toggle-content">
+						<ul class="footer-links list-unstyled">
+							<li><a href="../about-us.html">TringMe</a></li>
+							<li><a href="../career.html">Career</a></li>
+							<li><a href="../news.html">In News</a></li>
+							<li><a href="../contact.html">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+        </div>
+        <div class="col-md-3">
+			<div class="togglef toggle-transparent-body toggle-margin-top-0">
+
+				<div class="togglef footer">
+					<label>Explore TringMe</label>
+					<div class="toggle-content">
+						<ul class="footer-links list-unstyled">
+							<li><a href="../international-call-rates.html">International Call Rates</a></li>
+							<li><a href="../referral-program.html">Earn Bonus Credits</a></li>
+							<li><a href="../developer/overview.html">Developer</a></li>
+							<li><a href="../developer/wholesale-voip.html">Wholesale VoIP</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+            
+        </div>
+        <div class="col-md-3">
+			<div class="togglef toggle-transparent-body toggle-margin-top-0">
+
+				<div class="togglef footer">
+					<label>Help</label>
+					<div class="toggle-content">
+						<ul class="footer-links list-unstyled">
+							<!-- <li><a href="../how-to-use-tringme.html">How To Use</a></li> -->
+							<li><a href="../faq.html">FAQ</a></li>
+							<li><a href="../contact-support.html">Support</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+        </div>
+        <div class="col-md-4">
+
+            <!-- Newsletter Form -->
+            <div class="col-sm-6 padding-20 padding-left-0" style='padding-left:0px !important;padding-top: 0px !important;'>
+                <a target='_blank' href='https://play.google.com/store/apps/details?id=com.tringme.android&referrer=utm_source%3Dtringmeweb'><img src='../assets/images/google-play-store.png' /></a>
+            </div>
+            <div class="col-sm-6 padding-20" style='padding-left:0px !important;padding-top: 0px !important;'>
+                <a target='_blank' href='https://itunes.apple.com/app/apple-store/id1050425742?pt=117979707&ct=tringmeweb&mt=8'><img src='../assets/images/apple-store.png' /></a>
+            </div>
+            <h4 class="letter-spacing-1 col-sm-12 no-margin padding-0">Stay Connected</h4>
+
+
+
+            <!-- Social Icons -->
+            <div class="margin-top-20">
+                <a href="https://facebook.com/tringme" class="social-icon social-icon-round social-icon-border social-facebook"  data-placement="bottom" title="Facebook">
+                    <i class="icon-facebook"></i>
+                </a>
+                <a href="https://twitter.com/tringme" class="social-icon social-icon-round social-icon-border social-twitter"  data-placement="top" title="Twitter">
+                    <i class="icon-twitter"></i>
+                </a>
+                <a href="https://plus.google.com/+Tringme" class="social-icon social-icon-round social-icon-border social-gplus"  data-placement="top" title="Google+">
+                     <i class="icon-gplus"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/tringme" class="social-icon social-icon-round social-icon-border social-linkedin" data-placement="top" title="LinkedIn">
+                    <i class="icon-linkedin"></i>
+                </a>
+                <a href="#" class="social-icon social-icon-round social-icon-border social-youtube"  data-placement="top" title="Youtube">
+                    <i class="icon-youtube"></i>
+                </a>
+
+
+
+
+
+            </div>
+            <!-- /Social Icons -->
+            <div class='col-sm-12'>
+
+            </div>
+        </div>
+        <div class='col-sm-12 margin-top-30 '>
+            <p class='margin-bottom-10 size-13'><img src="../assets/images/footer-no-emergency-call.png"><span>  No emergency calls with TringMe</span></p>
+            <p class='margin-bottom-10 size-13'>TringMe is not a replacement for your telephone and can't be used for emergency calling</p>
+        </div>
+       
+    </div>
+	</tringmesection>
+            	</div>
+            	<div class="copyright">
+                <div class="container">
+				<tringmesection cref="last_footer.html">
+                    <ul class="pull-right nomargin list-inline mobile-block margin-top-5">
+            <li><a href="../terms-of-use.html#privacy">Privacy</a></li>
+            <li>&bull;</li>
+            <li><a href="../terms-of-use.html#terms">Terms of services</a></li>
+            <li>&bull;</li>
+           <!--  <li><a href="#">Blog</a></li>
+            <li>&bull;</li> -->
+            <li><a href="../sitemap.html">Sitemap</a></li>
+            <li>&bull;</li>
+            <li><a href="../contact.html">Contact us</a></li>
+
+        </ul>
+        <img style='margin-right:10px;' src="../assets/images/footer-logo.png" />&copy; 2016 TringMe. All rights reserved.
+					</tringmesection>
+                </div>
+            </div>
+        </footer>
+        <!-- /FOOTER -->
+
+    </div>
+    <!-- /wrapper -->
+    <!-- SCROLL TO TOP -->
+    <a href="#" id="toTop"></a>
+
+
+    <!-- PRELOADER -->
+
+    <div id="preloader">
+        <div class="inner">
+            <span class="loader"></span>
+        </div>
+    </div><!-- /PRELOADER -->
+    <!-- JAVASCRIPT FILES -->
+    <script type="text/javascript">var plugin_path = '../assets/plugins/';</script>
+    <script type="text/javascript" src="../assets/plugins/jquery/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="../assets/js/scripts.js"></script>
+    <!-- REVOLUTION SLIDER -->
+    <script type="text/javascript" src="../assets/plugins/slider.revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="../assets/plugins/slider.revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="../assets/js/view/demo.revolution_slider.js"></script>
+    <script src="../assets/js/tringme.js"></script>
+    <script src="../assets/js/angucomplete-alt.js"></script>
+    <script src="../assets/js/countries.js"></script>
+	
+
+</body>
+</html>

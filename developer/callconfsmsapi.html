@@ -1,0 +1,1331 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]>			<html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>			<html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8" />
+    <title>Call, Conferencing & SMS API | TringMe</title>
+    <meta name="keywords" content="call api, conferencing api, sms api, TringMe" />
+    <meta name="description" content="TringMe provides multiple ways to place calls using Rest API, Flash, SIP, Mobile VoIP etc." />
+    <meta name="Author" content="https://tringme.com" />
+
+    <!-- mobile settings -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <!-- WEB FONTS : use %7C instead of | (pipe) -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+
+    <!-- CORE CSS -->
+    <link href="../assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+
+    <!-- THEME CSS -->
+    <link href="../assets/css/essentials.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+    <!-- PAGE LEVEL SCRIPTS -->
+    <link href="../assets/css/header-1.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/color_scheme/red.css" rel="stylesheet" type="text/css" id="color_scheme" />
+
+    <!-- REVOLUTION SLIDER -->
+    <link href="../assets/plugins/slider.revolution/css/extralayers.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/slider.revolution/css/settings.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="https://api.tringme.com/tringmewebapi.js"></script>
+    <link href="../assets/css/angucomplete-alt.css" rel="stylesheet">
+	
+	<!-- FEVICON -->
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="../apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="../apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="../favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="../favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="../favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="../favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="../favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="TringMe"/>
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="../mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="../mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="../mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="../mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="../mstile-310x310.png" />
+    
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','analytics');
+
+		analytics('create', 'UA-74062941-1', 'auto');
+		analytics('send', 'pageview');
+	</script>
+
+</head>
+<body ng-app="app" class="smoothscroll enable-animation">
+    <!-- wrapper -->
+    <div id="wrapper" ng-controller="MainController">
+        <div id="header" class="sticky clearfix">
+
+            <!-- TOP NAV -->
+		<tringmesection cref="header.html">
+            <header id="topNav">
+                <div class="container">
+
+                    <!-- Mobile Menu Button -->
+                    <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Logo -->
+                    <a class="logo pull-left" href="../index.html">
+                        <img src="../assets/images/tringme-logo.png" alt="tringme logo" /> <!-- light logo -->
+                        <!-- <img src="assets/images/logo_dark.png" alt="" /> --> <!-- dark logo -->
+                    </a>
+		    
+                    <div class="navbar-collapse pull-right nav-main-collapse collapse submenu-dark">
+                        <nav class="nav-main">
+                            <ul id="topMain" class="nav nav-pills nav-main">
+                                <li class="dropdown">
+                                    <a href="../index.html">
+                                        Home
+                                    </a>
+
+                                </li>
+                               
+                                <li class="dropdown">
+                                    <a href="../international-call-rates.html">
+                                        Rates
+                                    </a>
+                                   
+                                </li>
+                                <li class="dropdown">
+                                    <a href="../developer/overview.html">
+                                        Developer
+                                    </a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="../help.html">
+                                       
+                                        Help
+                                    </a>
+                                </li>
+
+                                <li class="dropdown ">
+                                    <a href="/login" class="hidden-lg hidden-md">
+                                        {{logintext}}
+                                    </a>
+                                    <a href="/login" class="hidden-xs hidden-sm">
+                                        <span class='btn login'>
+                                            {{logintext}}
+                                        </span>
+                                    </a>
+                                </li>
+                            
+
+                            </ul>
+
+                        </nav>
+                    </div>
+		    
+
+                </div>
+            </header>
+		</tringmesection>
+            <!-- /Top Nav -->
+
+        </div>
+        <section class="page-header">
+            <div class="container">
+
+                <h1>Call Conferencing & SMS</h1>
+
+                <!-- breadcrumbs -->
+                <ol class="breadcrumb visible-lg visible-md">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="overview.html">Developer</a></li>
+                    <li><a href="#">Calls, Conferencing & SMS</a></li>
+
+                </ol><!-- /breadcrumbs -->
+
+            </div>
+        </section>
+        <!-- /PAGE HEADER -->
+
+
+        <section class='padding-xs'>
+           
+            <div class="container">
+                <div class='row'>
+                    <div class='col-sm-3'>
+                        <!-- CATEGORIES -->
+                        <div class="side-nav margin-bottom-60">
+                            <div class="side-nav-head">
+                                <button class="fa fa-bars"></button>
+								 <h4>Topics</h4>
+                            </div>
+                            <ul class="list-group list-group-bordered list-group-noicon uppercase">
+                               
+                                <li class="list-group-item">
+                                    <a href="restapi.html">Rest API</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="usermanagementapi.html">Account Management</a>
+                                </li>
+                                <li class="list-group-item active">
+                                    
+                                    <a href="#" class='dropdown-toggle'>Calls, Conferencing & SMS</a>
+                                    <ul>
+                                        <li><a href="#placecall" class="scrollTo">Place Call</a></li>
+                                        <li><a href="#sendsms" class="scrollTo">Send SMS</a></li>
+                                        <li><a href="#cancelscheduledops" class="scrollTo">Cancel Scheduled OPS</a></li>
+                                        <li><a href="#getvoicemail" class="scrollTo">Get Voice Mail</a></li>
+                                        <li><a href="#deletevoicemail" class="scrollTo">Delete Voice Mail</a></li>
+                                        <li><a href="#conference" class="scrollTo">Conference</a></li>
+                                        <li><a href="#setcallerid" class="scrollTo">Set CallerID</a></li>
+                                        <li><a href="#verifycallerid" class="scrollTo">Verify CallerID</a></li>
+                                        <li><a href="#deletecallerid" class="scrollTo">Delete CallerID</a></li>
+                                    </ul>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="destinations.html">Destinations</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="channelapi.html">Channels</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="sipanddid.html">SIP & Inward Dialing</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="billingchargingcdrapi.html">Billing Charging & CDR</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="realtimenotificationsapi.html">Notifications</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <!-- /CATEGORIES -->
+                    </div>
+                    <div class='col-sm-9'>
+                        <div class="col-sm-12">
+                            <h3 id="placecall">Telephony, Messaging and Conferencing APIsPlacing a call</h3>
+                            <p>TringMe provides multiple ways to place calls - using REST API, using Flash, SIP, Instant messenger (e.g.Google-Talk), Mobile VoIP etc. This particular API will give you all the information needed to place a call using REST.</p>
+
+                            <p>Fundamentally speaking, this will create a callback between two parties. The system will call ‘src’ first and then ‘dest’ and then bridge both the calls. By default, the ‘src’ will receive the call with the caller-id of the invoker (as set by the ‘setcallerid’ API). The ‘dest’ will receive the ‘src’ number as the caller-id. The caller-id behavior can be modified by setting the private caller-id flag. In private caller-id case, both ‘src’ and ‘dest’ with receive the caller id of the invoker thereby enabling the communication between two parties without revealing each other’s number. The API is extremely powerful and supports a lot of combinations (for e.g. broadcasting a message to multiple phone numbers, playing greeting messages, taking user input and so on).</p>
+
+                            <table class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Parameters</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>op</td>
+                                        <td>call</td>
+                                    </tr>
+                                    <tr>
+                                        <td>src</td>
+                                        <td>First party phone number. Call will be first placed to this number. If the call is not answered, the API will terminate. You can also specify comma separated multiple phone numbers to make bulk calls. This feature is specifically useful when broadcasting a voice message or inviting multiple people to a conference (e.g. 18585551212,19125551212). If you specify multiple phone numbers, then ‘dest’ should not be specified (Readmore about ‘dest’ below).</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cookie [optional]</td>
+                                        <td>Cookie which was obtained using ‘login’.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>dest [optional]</td>
+                                        <td>Second party phone number. Destination is optional if ‘greeting’ parameter is specified. This will enable call(the ‘src’ ) and play a message functionality.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>callerid [optional]</td>
+                                        <td>Caller-ID to be used (set using ‘setcallerid’ API).</td>
+                                    </tr>
+                                    <tr>
+                                        <td>tag [optional]</td>
+                                        <td>User supplied parameter to associate a call in the Call Data Records. This should be alphanumeric only (a-z, A-Z, 0-9). All other characters will be replaced by ‘X’. It can be a maximum of 31 characters.If you with to be notified via a notify URL (‘setnotifyurl’), please ensure that tag is specified. Otherwise the notify URL will not be invoked. This is to ensure that you can identify the call with the tag.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>duration [optional]</td>
+                                        <td>Duration after which the call should automatically disconnect. The duration is the timeframe from the moment ‘src’ is answered till the time when the call disconnects.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>greeting [optional]</td>
+                                        <td>Duration after which the call should automatically disconnect. The duration is the timeframe from the moment ‘src’ is answered till the time when the call disconnects.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>duration [optional]</td>
+                                        <td>
+                                            Greeting that should be played immediately after the ‘src’ answers. It can be either:
+                                            <ul class="list-unstyled grey-background">
+                                                <li class="margin-bottom-10"><i class="fa fa-check"></i>URL of the wave file. Check supported formats below.</li>
+                                                <li class="margin-bottom-10 "><i class="fa fa-check"></i>A text string that should be spoken. It needs to prefixed with "male:" or "female:" to specify the type of voice to be used. For e.g.("male:Welcome to XYZ Bank")</li>
+
+                                            </ul>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>postcallgreeting [optional]</td>
+                                        <td>
+                                            Greeting that should be played before disconnecting the call. It can be either:
+                                            <ul class="list-unstyled grey-background">
+                                                <li class="margin-bottom-10"><i class="fa fa-check"></i>URL of the wave file. Check supported formats below.</li>
+                                                <li class="margin-bottom-10 "><i class="fa fa-check"></i>A text string that should be spoken. It needs to prefixed with "male:" or "female:" to specify the type of voice to be used. For e.g. ("male:Thank you for using XYZ Bank")</li>
+
+                                            </ul>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>dtmfmaxdigits [optional]</td>
+                                        <td>Maximum number of DTMF digits expected to enter by user after playing a greeting. The default value for this option is 0.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>dtmfretries [optional]</td>
+                                        <td>Number of times DTMF entry will be retried. The default value is 1. This is valid only if ‘dtmfmaxdigits’ > 0 and ‘greeting’ is specified.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>dtmftimeout [optional]</td>
+                                        <td>DTMF timeout in seconds. The default value is 10 seconds. This is valid only if ‘dtmfmaxdigits’ > 0 and ‘greeting’ is specified.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>dtmftimeoutgreeting [optional]</td>
+                                        <td>
+                                            Greeting that should be played if DTMF timeout is reached. It can be either:
+                                            <ul class="list-unstyled grey-background">
+                                                <li class="margin-bottom-10"><i class="fa fa-check"></i>URL of the wave file. Check supported formats below.</li>
+                                                <li class="margin-bottom-10 "><i class="fa fa-check"></i>A text string that should be spoken. It needs to prefixed with "male:" or "female:" to specify the type of voice to be used. For e.g. ("male:Thank you for using XYZ Bank")</li>
+
+                                            </ul>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>flag [optional]</td>
+                                        <td>
+                                            One or more combinations of the flags below:<br />
+                                            0 - Disables all notifications.<br />
+                                            1 - Send call completed and DTMF input notifications. This is the default value.<br />
+                                            2 - Send call-in-progress notifications (e.g. SRCANSWERED) 16 - Private Callerid.
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>when [optional]</td>
+                                        <td>Time in seconds, after which call should be invoked. This is how calls can be scheduled in the future. Value should be more than 60 seconds.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Supported Formats in Greeting Audio File:</td>
+                                        <td>
+                                            <ul class="list-unstyled grey-background">
+                                                <li class="margin-bottom-10"><i class="fa fa-check"></i>WAV file - 8KHz sampled, 16 bit linear, mono, uncompressed.</li>
+
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Sample Request URL</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <code>
+                                                http://api.tringme.com/api.php?op=call &src=18585551234
+                                                &dest=15015551234 &cookie=123456789012345678901 2345678901
+                                                 &apikey=b12345678901234567890123 456789012345 &sig=f1234567890123456789012345678901
+                                            </code>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Expected Response</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <code>
+                                                OK <[operationid]>
+                                            </code>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Sample Responses</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            OK
+                                            <br />
+                                            OK 1feh68fdkry60bs43
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+
+                            <hr id="sendsms" />
+                            <h3>Send SMS</h3>
+                            <p>This API is used to send an SMS to worldwide destinations.</p>
+
+                            <table class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Parameters</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>op</td>
+                                        <td>sms</td>
+                                    </tr>
+                                    <tr>
+                                        <td>dest</td>
+                                        <td>Destination phone numbers where the SMS should be sent. You can also specify comma separated multiple phone numbers to send bulk SMS.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>msg</td>
+                                        <td>Message to be sent (HTTP URL Encoded)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cookie [optional]</td>
+                                        <td>Cookie which was obtained using ‘login’.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>callerid [optional]</td>
+                                        <td>Caller-ID to be used (set using ‘setcallerid’ API).</td>
+                                    </tr>
+                                    <tr>
+                                        <td>private [optional]</td>
+                                        <td>Create a private user. If this parameter is specified, user will be created in API user's private space. No emails will be sent by TringMe for any private users.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>when [optional]</td>
+                                        <td>Time in seconds, after which call should be invoked. This is how SMS can be scheduled to be sent at a later time.</td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Sample Request URL</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <code>
+                                                http://api.tringme.com/api.php?op=sms &dest=15015551234
+                                                &msg=hai+joe &apikey=b1234567890123456789 0123456789012345
+                                                &sig=f1234567890123456789 012345678901
+                                            </code>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Expected Response</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <code>
+                                                OK
+                                            </code>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Sample Responses</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            OK
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <hr id="cancelscheduledops" />
+                            <h3>Cancel a scheduled Call /SMS / Conference</h3>
+                            <p>This API is used to cancel a scheduled call, SMS or conference. This is a premium API and will be available on request only. Note that it's not always possible to cancel the scheduled call, SMS or conferences if there is not a sufficient time to cancel or calls/sms are already placed in queue.</p>
+                            <table class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Parameters</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>op</td>
+                                        <td>cancel</td>
+                                    </tr>
+                                    <tr>
+                                        <td>id</td>
+                                        <td>Call/SMS/Conference identifier.</td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Sample Request URL</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <code>
+                                                http://api.tringme.com/api.php ?op=cancel& id=1q6gts8ers4
+                                                &apikey=b123456789012345678 90123456789012345
+                                                &sig=f1234567890123456 789012345678901
+                                            </code>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Expected Response</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <code>
+                                                OK
+                                            </code>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Sample Responses</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            OK
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <hr id="getvoicemail" />
+                            <h3>Get Voicemails</h3>
+                            <p>This API is used to retrieve voicemails.</p>
+                            <table class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Parameters</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>op</td>
+                                        <td>getvoicemail</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cookie</td>
+                                        <td>cookie which was obtained using 'login'.</td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Sample Request URL</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <code>
+                                                http://api.tringme.com/api.php ?op=reactivateuser
+                                                &email=joe.dirt%40somedomain.com &apikey=b1234567890123456789012345 6789012345
+                                                &sig=f123456789012345678901 2345678901
+                                            </code>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Expected Response</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <code>
+                                                OK along with voicemail information in JSON format
+                                            </code>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Sample Responses</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            OKJ<br />
+                                            [ {"voicemail":"v1t41234567890 1234567891", "srcphone":"", "recvtime":"45"},
+                                            <br />
+                                            { "voicemail":"v1t41234567880 2234567892", "srcphone":"", "recvtime":"138"}]
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <hr id="deletevoicemail" />
+                            <h3>Delete Voicemails</h3>
+                            <p>This API is used to delete voicemails.</p>
+                            <table class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Parameters</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>op</td>
+                                        <td>deletevoicemail</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cookie</td>
+                                        <td>cookie which was obtained using 'login'.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>id</td>
+                                        <td>Voicemail identifier available in the result obtained using 'getvoicemail'. If 'id' is set to 0, then all voicemails will be deleted.</td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Sample Request URL</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <code>
+                                                http://api.tringme.com/api.php? op=deletevoicemail &cookie=123456789012345678901 2345678901
+                                                &id=v1t412345678901234567891 &apikey=b1234567890123456789012345 6789012345
+                                                &sig=f123456789012345678901 2345678901
+                                            </code>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Expected Response</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <code>
+                                                OK
+                                            </code>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Sample Responses</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            OK
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <hr id="conference" />
+                            <h3>Create a Conference</h3>
+                            <p>This API is used to schedule a conference call.</p>
+                            <table class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Parameters</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>op</td>
+                                        <td>createconference</td>
+                                    </tr>
+                                    <tr>
+                                        <td>src</td>
+                                        <td>PIN number that every attendee will be required to specify for authentication purposes before joining the conference call.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>apin</td>
+                                        <td>PIN number of the administrator. Administrator has special privileges to control the conferencing parameters.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>maxusers [optional]</td>
+                                        <td>Max number of users that can attend this conference call. The default value is 10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>flag [optional]</td>
+                                        <td>Flags</td>
+                                    </tr>
+                                    <tr>
+                                        <td>duration [optional]</td>
+                                        <td>Duration of this conference call in minutes. The default value is 60 minutes.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>when [optional]</td>
+                                        <td>Time in seconds, after which conference should be activated.</td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Sample Request URL</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <code>
+                                                http://api.tringme.com/api.php?op=createconference &pin=12345&apin=41234
+                                                &apikey=b12345678901234567890123 456789012345
+                                                &sig=f1234567890123456789012 345678901
+                                            </code>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Expected Response</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <code>
+                                                OK <id>
+                                            </code>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Sample Responses</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            OK
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <hr id="setcallerid" />
+                            <h3>Set CallerID</h3>
+                            <p>This API is used to set caller-id.</p>
+                            <table class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Parameters</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>op</td>
+                                        <td>setcallerid</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cookie</td>
+                                        <td>Cookie which was obtained using ‘login’.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>message</td>
+                                        <td>Message that should be sent to the user. Note that you can include %TRINGMEAUTHCODE% as a placeholder in your message where TringMe will insert the verification code. This verification code will be required for ‘verifycallerid’ API to complete the process of setting a verified caller-id. You can insert %TRINGMEAUTHCODE% as many times as you want in the message. For e.g. A typical use case of this could be to repeat the code if a call is placed to the user.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>callerid</td>
+                                        <td>Phone number to be set as the callerid. To verify the authenticity of callerid, a call or an SMS will be placed with a verification code which can be passed to ‘verifycallerid’ API subsequently to complete the process. . The choice of using call or SMS for verification can be controlled by the ‘flag’ parameter below. Please note that SMS or Call charges as applicable will be charged to the user.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>flag [optional]</td>
+                                        <td>
+                                            <p>One or more combinations of the flags below: Following bit values can be specified:</p>
+                                            <ul class="list-unstyled grey-background">
+                                                <li class="margin-bottom-10"><i class="fa fa-check"></i>Bit 0 - Use SMS (0) or Call (1) for verification. '0' is the default value</li>
+                                                <li class="margin-bottom-10 "><i class="fa fa-check"></i>Bit 1 - Set this phone number as the default caller-id. This is useful when you have multiple verified caller-ids (default is ON).</li>
+                                                <li class="margin-bottom-10 "><i class="fa fa-check"></i>Bit 2 - Forced verification. This is useful when you want to force a caller-id verification even if that 'callerid' was already verified earlier.</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+
+
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Sample Request URL</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            
+                                                http://api.tringme.com/api.php?op=setcallerid
+                                                &cookie=1234567890123456789 012345678901
+                                                 &message=setcallerid+operation+is +successful with+authenticaion+ code+%25TRINGMEAUTHCODE%25 &callerid=1234567890
+                                                 &flag=0 &apikey=b12345678901234567890123 456789012345 &sig=f1234567890123456789 012345678901
+                                           
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Expected Response</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <code>
+                                                OK
+                                            </code>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Sample Responses</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            OK
+
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <hr id="verifycallerid" />
+                            <h3>Verify CallerID</h3>
+                            <p>This API is used to verify the caller-id that was being requested to set via ‘setcallerid’ API.</p>
+
+                            <table class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Parameters</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>op</td>
+                                        <td>verifycallerid</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cookie</td>
+                                        <td>Cookie which was obtained using ‘login’.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>code</td>
+                                        <td>The verification code that was sent in the SMS or call. The SMS or call was placed in response to ‘setcallerid’ API invocation.</td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Sample Request URL</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                          
+                                                http://api.tringme.com/api.php? op=verifycallerid
+                                                 <br/>&cookie=12345678901234567 89012345678901 &code=4kjq1ew5
+                                                 <br/>&apikey=b123456789012345 67890123456789012345<br/> &sig=f12345678901234567890 12345678901
+                                           
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Expected Response</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <code>
+                                                OK
+                                            </code>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Sample Responses</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            OK
+
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <hr id="deletecallerid" />
+                            <h3>Delete CallerID</h3>
+                            <p>This API is used to delete existing caller-id that was being set via ‘setcallerid’ API.</p>
+
+                            <table class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Parameters</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>op</td>
+                                        <td>deletecallerid</td>
+                                    </tr>
+                                    <tr>
+                                        <td>cookie</td>
+                                        <td>Cookie which was obtained using ‘login’.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>callerid</td>
+                                        <td>callerid</td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Sample Request URL</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            
+                                                http://api.tringme.com/api.php? op=deletecallerid
+                                                 <br/>&cookie=123456789012345678901234 5678901
+												 <br/>&callerid=18585551234 &apikey=b1234567890123456789012345 6789012345
+                                                <br/>&sig=f1234567890123456789012 345678901
+                                            
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Expected Response</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <code>
+                                                OK
+                                            </code>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <table class="table table-bordered table-striped table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>Sample Responses</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            OK
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+
+            </div>
+        </section>
+        <!-- / -->
+        <!-- /ContactSupport -->
+        <div class="callout alert alert-transparent noborder noradius nomargin paddding-60" style=' background-color: #f9fafc;'>
+            <div class="text-center">
+
+                <p class='size-18'>If you are an enterprise and would like to know better how TringMe can help you reduce cost and at the same time benefit you, <br />please send a mail to <a href="mailto:bizdev@tringme.com" class="redh1-a">bizdev@tringme.com</a></p>
+
+            </div>
+        </div>
+        <!-- /ContactSupport -->
+        <!-- FOOTER -->
+        <footer id="footer">
+		<div class="container">
+		<tringmesection cref="footer.html">
+                <div class="row" id="desktopFooter">
+
+                 <div class="col-md-2">
+			 <div class="togglef toggle-transparent-body toggle-margin-top-0">
+
+			    <div class="togglef footer active">
+					<label>About</label>
+					<div class="toggle-content">
+						<ul class="footer-links list-unstyled">
+							<li><a href="../about-us.html">TringMe</a></li>
+							<li><a href="../career.html">Career</a></li>
+							<li><a href="../news.html">In News</a></li>
+							<li><a href="../contact.html">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+        </div>
+        <div class="col-md-3">
+			<div class="togglef toggle-transparent-body toggle-margin-top-0">
+
+				<div class="togglef footer">
+					<label>Explore TringMe</label>
+					<div class="toggle-content">
+						<ul class="footer-links list-unstyled">
+							<li><a href="../international-call-rates.html">International Call Rates</a></li>
+							<li><a href="../referral-program.html">Earn Bonus Credits</a></li>
+							<li><a href="../developer/overview.html">Developer</a></li>
+							<li><a href="../developer/wholesale-voip.html">Wholesale VoIP</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+            
+        </div>
+        <div class="col-md-3">
+			<div class="togglef toggle-transparent-body toggle-margin-top-0">
+
+				<div class="togglef footer">
+					<label>Help</label>
+					<div class="toggle-content">
+						<ul class="footer-links list-unstyled">
+							<!-- <li><a href="../how-to-use-tringme.html">How To Use</a></li> -->
+							<li><a href="../faq.html">FAQ</a></li>
+							<li><a href="../contact-support.html">Support</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+        </div>
+        <div class="col-md-4">
+
+            <!-- Newsletter Form -->
+            <div class="col-sm-6 padding-20 padding-left-0" style='padding-left:0px !important;padding-top: 0px !important;'>
+                <a target='_blank' href='https://play.google.com/store/apps/details?id=com.tringme.android&referrer=utm_source%3Dtringmeweb'><img src='../assets/images/google-play-store.png' /></a>
+            </div>
+            <div class="col-sm-6 padding-20" style='padding-left:0px !important;padding-top: 0px !important;'>
+                <a target='_blank' href='https://itunes.apple.com/app/apple-store/id1050425742?pt=117979707&ct=tringmeweb&mt=8'><img src='../assets/images/apple-store.png' /></a>
+            </div>
+            <h4 class="letter-spacing-1 col-sm-12 no-margin padding-0">Stay Connected</h4>
+
+
+
+            <!-- Social Icons -->
+            <div class="margin-top-20">
+                <a href="https://facebook.com/tringme" class="social-icon social-icon-round social-icon-border social-facebook"  data-placement="bottom" title="Facebook">
+                    <i class="icon-facebook"></i>
+                </a>
+                <a href="https://twitter.com/tringme" class="social-icon social-icon-round social-icon-border social-twitter"  data-placement="top" title="Twitter">
+                    <i class="icon-twitter"></i>
+                </a>
+                <a href="https://plus.google.com/+Tringme" class="social-icon social-icon-round social-icon-border social-gplus"  data-placement="top" title="Google+">
+                     <i class="icon-gplus"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/tringme" class="social-icon social-icon-round social-icon-border social-linkedin" data-placement="top" title="LinkedIn">
+                    <i class="icon-linkedin"></i>
+                </a>
+                <a href="#" class="social-icon social-icon-round social-icon-border social-youtube"  data-placement="top" title="Youtube">
+                    <i class="icon-youtube"></i>
+                </a>
+
+
+
+
+
+            </div>
+            <!-- /Social Icons -->
+            <div class='col-sm-12'>
+
+            </div>
+        </div>
+        <div class='col-sm-12 margin-top-30 '>
+            <p class='margin-bottom-10 size-13'><img src="../assets/images/footer-no-emergency-call.png"><span>  No emergency calls with TringMe</span></p>
+            <p class='margin-bottom-10 size-13'>TringMe is not a replacement for your telephone and can't be used for emergency calling</p>
+        </div>
+       
+    </div>
+	</tringmesection>
+            	</div>
+            	<div class="copyright">
+                <div class="container">
+				<tringmesection cref="last_footer.html">
+                    <ul class="pull-right nomargin list-inline mobile-block margin-top-5">
+            <li><a href="../terms-of-use.html#privacy">Privacy</a></li>
+            <li>&bull;</li>
+            <li><a href="../terms-of-use.html#terms">Terms of services</a></li>
+            <li>&bull;</li>
+           <!--  <li><a href="#">Blog</a></li>
+            <li>&bull;</li> -->
+            <li><a href="../sitemap.html">Sitemap</a></li>
+            <li>&bull;</li>
+            <li><a href="../contact.html">Contact us</a></li>
+
+        </ul>
+        <img style='margin-right:10px;' src="../assets/images/footer-logo.png" />&copy; 2016 TringMe. All rights reserved.
+					</tringmesection>
+                </div>
+            </div>
+        </footer>
+        <!-- /FOOTER -->
+
+    </div>
+    <!-- /wrapper -->
+    <!-- SCROLL TO TOP -->
+    <a href="#" id="toTop"></a>
+
+
+    <!-- PRELOADER -->
+
+    <div id="preloader">
+        <div class="inner">
+            <span class="loader"></span>
+        </div>
+    </div><!-- /PRELOADER -->
+    <!-- JAVASCRIPT FILES -->
+    <script type="text/javascript">var plugin_path = '../assets/plugins/';</script>
+    <script type="text/javascript" src="../assets/plugins/jquery/jquery-2.1.4.min.js"></script>
+    
+    <script type="text/javascript" src="../assets/js/scripts.js"></script>
+    <!-- REVOLUTION SLIDER -->
+    <script type="text/javascript" src="../assets/plugins/slider.revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="../assets/plugins/slider.revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="../assets/js/view/demo.revolution_slider.js"></script>
+    <script src="../assets/js/tringme.js"></script>
+    <script src="../assets/js/angucomplete-alt.js"></script>
+    <script src="../assets/js/countries.js"></script>
+	
+
+</body>
+</html>
