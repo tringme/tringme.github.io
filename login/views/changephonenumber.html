@@ -1,6 +1,46 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd"><html><body><div class="col-md-9 tm-dialpad-area clearfix"><div class="tm-content-header clearfix"><div class="heading-text tm-alignleft"><h2 class="title-text-ad">Change Phone Number</h2></div></div><div class="tm-content-body min-height-white-part-set  min-height-433 clearfix"><div class="change-phone-acsetting col-md-12 mar-tb-30px mar-b0 mobile-margin-b-0"><p>Your current phone number is: <span class="color-blue">+{{user.phone}}</span></p><p>To change the phone number, enter your new phone number below. We will send you an SMS or call you with a verification code. If you already have a <strong>verification code</strong>, <a href="#/setting/changephonecode" class="color-red">click here</a>.</p><div class="verification-text col-md-9 pad-20"><div class="col-md-8 col-sm-8 mar-t20"><div class="validation-form1"><input type="tel" autofocus="" maxlength="18" ng-model="register.number" class="form-control maskInputNumber input-background" id="verf" placeholder="Enter your phone number"><i>User Country Code and Phone number : e.g +18585551212</i></div></div><div class="col-sm-4 mar-t20 mar-b30"><div class="btn-verification mar-lro"><a href=""><button id="sendverf" type="button" disabled ng-click="verify();" class="btn btn-lg btn-green btn-block">SEND VERIFICATION CODE </button></a><a class="hover-unrline" href="#/setting/changephonecode"><i>Already have verification code?</i></a></div></div></div></div></div></div><script>
+        <div class="col-md-9 tm-dialpad-area clearfix">
+          <div class="tm-content-header clearfix">
+            <div class="heading-text tm-alignleft">
+              <h2 class="title-text-ad">Change Phone Number</h2>
+            </div>
+          </div>
+          <div class="tm-content-body min-height-white-part-set  min-height-433 clearfix">
+          <div class="change-phone-acsetting col-md-12 mar-tb-30px mar-b0 mobile-margin-b-0">
+        <div class="col-sm-2 visible-lg"></div>
+        <div class="col-sm-12 col-lg-8  mar-t50 mar-b15 mar-top-49px ">
+            <p class="align-center color-blue">&nbsp;{{appdata.message}}</p>
+            <p class="align-center color-grey-font">Download TringMe app on your mobile to change your phone number</p>
+	    <p>&nbsp; </p>
+	    <div class="align-center">
+	         <a target="_blank" class="margin-top-40 visible-lg-inline-block visible-md-inline-block padding-0" href="https://play.google.com/store/apps/details?id=com.tringme.android&amp;referrer=utm_source%3Dtringmeweb" style="visibility: visible;"><img class="border-radius-6" src="https://tringme.com/assets/images/google-play-store.png" alt="TringMe calling app for android"></a>
+		 <a target="_blank" class="margin-top-40 wow fadeIn visible-lg-inline-block visible-md-inline-block padding-0" href="https://itunes.apple.com/app/apple-store/id1050425742?pt=117979707&amp;ct=tringmeweb&amp;mt=8" style="visibility: visible;"><img class="border-radius-6" src="https://tringme.com/assets/images/apple-store.png" alt="TringMe calling app for iphone"></a>
+		 </div>
+	    <p>&nbsp; </p>
+            <p class="align-center color-grey-font">Once you change your number, you can come back here and start using TringMe or directly from your mobiles.</p>
+        <div class="col-sm-2 visible-lg"></div>
+      </div>
+
+	    <!--
+<p class="color-blue tm-verifyfont">Why We do this</p>
+<div class="verify-hr"><hr></div>
+<div class="row">
+              <div class="verification-ul">
+                <ul>
+                  <li>This is for safety of your account. Also We need to be sure that the phone number you entered belongs to you to prevent misuse of our services</li>
+                  
+                  <li>Without Phone Verification, your phone number can't updated.</li>
+                </ul>
+              </div>
+            </div>
+	    -->
+            
+            </div>
+          </div>
+        </div>
+     <script>
          $('.maskInputNumber').mask('+000000000000000000');
-  </script><script>
+  </script> 
+<script>
     (function () {
         $('#verf').keyup(function () {
             var empty = false;
@@ -17,4 +57,4 @@
             }
         });
     })()
-</script></body></html>
+</script>

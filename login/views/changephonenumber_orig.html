@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd"><html><body><div class="col-md-9 tm-dialpad-area clearfix"><div class="tm-content-header clearfix"><div class="heading-text tm-alignleft"><h2 class="title-text-ad">Change Phone Number</h2></div></div><div class="tm-content-body min-height-white-part-set  min-height-433 clearfix"><div class="change-phone-acsetting col-md-12 mar-tb-30px mar-b0 mobile-margin-b-0"><p>Your current phone number is: <span class="color-blue">+{{user.phone}}</span></p><p>To change the phone number, enter your new phone number below. We will send you an SMS or call you with a verification code. If you already have a <strong>verification code</strong>, <a href="#/setting/changephonecode" class="color-red">click here</a>.</p><div class="verification-text col-md-9 pad-20"><div class="col-md-8 col-sm-8 mar-t20"><div class="validation-form1"><input type="tel" autofocus="" maxlength="18" ng-model="register.number" class="form-control maskInputNumber input-background" id="verf" placeholder="Enter your phone number"><i>User Country Code and Phone number : e.g +18585551212</i></div></div><div class="col-sm-4 mar-t20 mar-b30"><div class="btn-verification mar-lro"><a href=""><button id="sendverf" type="button" disabled ng-click="verify();" class="btn btn-lg btn-green btn-block">SEND VERIFICATION CODE </button></a><a class="hover-unrline" href="#/setting/changephonecode"><i>Already have verification code?</i></a></div></div></div></div></div></div><script>
+         $('.maskInputNumber').mask('+000000000000000000');
+  </script><script>
+    (function () {
+        $('#verf').keyup(function () {
+            var empty = false;
+            $('#verf').each(function () {
+                if ($(this).val().length < 11) {
+                    empty = true;
+                }
+            });
+
+            if (empty) {
+                $('#sendverf').attr('disabled', 'disabled');
+            } else {
+                $('#sendverf').removeAttr('disabled');
+            }
+        });
+    })()
+</script></body></html>
